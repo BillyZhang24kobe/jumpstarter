@@ -1,0 +1,1482 @@
+{
+  "seed": 42,
+  "candidates": [
+    {
+      "goal_id": "G013",
+      "goal_text": "Prepare for the GRE exam",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "3 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "diagnostic score summary",
+        "weekly study schedule",
+        "practice test plan",
+        "target school score tracker"
+      ],
+      "known_context_needs": [
+        "current diagnostic scores",
+        "target programs and score ranges",
+        "available study hours",
+        "budget for prep materials",
+        "test date constraints"
+      ],
+      "avoid": [
+        "generic study tips without score targets",
+        "overloading the first month",
+        "ignoring weak sections"
+      ]
+    },
+    {
+      "goal_id": "G014",
+      "goal_text": "Apply to medical school",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "9 to 18 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "application timeline",
+        "school list matrix",
+        "personal statement outline",
+        "letters of recommendation tracker",
+        "interview preparation plan"
+      ],
+      "known_context_needs": [
+        "GPA and MCAT status",
+        "clinical and volunteer experience",
+        "state residency",
+        "budget for applications",
+        "preferred specialties or regions"
+      ],
+      "avoid": [
+        "one size fits all school lists",
+        "missing primary application deadlines",
+        "underestimating essay revisions"
+      ]
+    },
+    {
+      "goal_id": "G015",
+      "goal_text": "Switch to a data analyst career",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "4 to 9 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "skills gap analysis",
+        "learning roadmap",
+        "portfolio project plan",
+        "resume revision checklist",
+        "networking outreach templates"
+      ],
+      "known_context_needs": [
+        "current work background",
+        "existing technical skills",
+        "preferred industries",
+        "time available for learning",
+        "income and job search constraints"
+      ],
+      "avoid": [
+        "recommending random courses",
+        "ignoring prior experience",
+        "focusing only on tools instead of projects"
+      ]
+    },
+    {
+      "goal_id": "G016",
+      "goal_text": "Negotiate a promotion package",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "achievement inventory",
+        "market compensation research plan",
+        "negotiation script",
+        "meeting agenda",
+        "fallback options list"
+      ],
+      "known_context_needs": [
+        "current role and compensation",
+        "recent performance outcomes",
+        "company promotion cycle",
+        "manager relationship",
+        "desired salary and benefits"
+      ],
+      "avoid": [
+        "aggressive scripts without context",
+        "unsubstantiated compensation claims",
+        "ignoring non salary benefits"
+      ]
+    },
+    {
+      "goal_id": "G017",
+      "goal_text": "Plan a semester research project",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "3 to 5 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "research question shortlist",
+        "semester milestone schedule",
+        "reading list",
+        "data collection plan",
+        "advisor meeting agenda"
+      ],
+      "known_context_needs": [
+        "field and course requirements",
+        "available datasets or lab access",
+        "advisor expectations",
+        "prior methods experience",
+        "submission deadlines"
+      ],
+      "avoid": [
+        "overbroad research questions",
+        "unrealistic data collection plans",
+        "skipping advisor feedback"
+      ]
+    },
+    {
+      "goal_id": "G018",
+      "goal_text": "Build a teaching assistant toolkit",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "office hours plan",
+        "grading rubric templates",
+        "student communication templates",
+        "discussion section checklist",
+        "weekly prep routine"
+      ],
+      "known_context_needs": [
+        "course subject and level",
+        "TA duties",
+        "class size",
+        "grading policies",
+        "prior teaching experience"
+      ],
+      "avoid": [
+        "assuming instructor responsibilities",
+        "generic classroom advice",
+        "neglecting accessibility needs"
+      ]
+    },
+    {
+      "goal_id": "G019",
+      "goal_text": "Apply for a summer internship",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 5 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "target company list",
+        "resume version plan",
+        "application tracker",
+        "cover letter template",
+        "interview practice schedule"
+      ],
+      "known_context_needs": [
+        "major or career field",
+        "graduation date",
+        "work authorization",
+        "location preferences",
+        "prior project experience"
+      ],
+      "avoid": [
+        "mass applying without tailoring",
+        "missing recruiting season timing",
+        "using a single resume for all roles"
+      ]
+    },
+    {
+      "goal_id": "G020",
+      "goal_text": "Choose a graduate program",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "decision criteria rubric",
+        "program comparison table",
+        "funding analysis",
+        "faculty fit notes",
+        "campus visit question list"
+      ],
+      "known_context_needs": [
+        "academic interests",
+        "admitted programs",
+        "funding offers",
+        "career goals",
+        "family or location constraints"
+      ],
+      "avoid": [
+        "ranking prestige alone",
+        "ignoring funding conditions",
+        "overlooking advisor fit"
+      ]
+    },
+    {
+      "goal_id": "G021",
+      "goal_text": "Prepare a conference poster",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 6 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "poster outline",
+        "visual layout draft",
+        "figure checklist",
+        "printing timeline",
+        "presentation talking points"
+      ],
+      "known_context_needs": [
+        "conference format rules",
+        "research findings",
+        "available figures",
+        "poster size requirements",
+        "audience background"
+      ],
+      "avoid": [
+        "text heavy poster design",
+        "late printing",
+        "unclear takeaways"
+      ]
+    },
+    {
+      "goal_id": "G022",
+      "goal_text": "Create a professional certification plan",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 12 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "certification comparison matrix",
+        "study budget",
+        "exam timeline",
+        "continuing education tracker",
+        "employer reimbursement checklist"
+      ],
+      "known_context_needs": [
+        "industry and role goals",
+        "current qualifications",
+        "certification prerequisites",
+        "exam costs",
+        "employer support options"
+      ],
+      "avoid": [
+        "choosing credentials by popularity",
+        "ignoring renewal requirements",
+        "underestimating exam eligibility rules"
+      ]
+    },
+    {
+      "goal_id": "G023",
+      "goal_text": "Reenter college",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "3 to 12 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "reenrollment checklist",
+        "credit transfer inventory",
+        "financial aid task list",
+        "course load plan",
+        "advisor meeting questions"
+      ],
+      "known_context_needs": [
+        "previous credits and transcripts",
+        "reason for stopping out",
+        "work and caregiving schedule",
+        "financial aid status",
+        "degree requirements"
+      ],
+      "avoid": [
+        "assuming full time enrollment",
+        "missing transcript deadlines",
+        "ignoring academic probation policies"
+      ]
+    },
+    {
+      "goal_id": "G024",
+      "goal_text": "Write a first poetry chapbook",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "theme map",
+        "poem selection list",
+        "revision schedule",
+        "submission shortlist",
+        "chapbook layout checklist"
+      ],
+      "known_context_needs": [
+        "existing poems",
+        "preferred themes",
+        "writing routine",
+        "publication goals",
+        "budget for editing or contests"
+      ],
+      "avoid": [
+        "forcing a generic theme",
+        "skipping revision cycles",
+        "submitting before formatting requirements are checked"
+      ]
+    },
+    {
+      "goal_id": "G025",
+      "goal_text": "Design a tabletop roleplaying campaign",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "1 to 4 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "campaign premise",
+        "session zero agenda",
+        "NPC roster",
+        "encounter outline",
+        "player safety checklist"
+      ],
+      "known_context_needs": [
+        "game system",
+        "player experience levels",
+        "preferred tone",
+        "session length",
+        "accessibility and safety preferences"
+      ],
+      "avoid": [
+        "overplanning unused lore",
+        "ignoring player interests",
+        "unbalanced encounters"
+      ]
+    },
+    {
+      "goal_id": "G026",
+      "goal_text": "Launch a handmade ceramics shop",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "3 to 9 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "product line plan",
+        "pricing worksheet",
+        "materials budget",
+        "shop setup checklist",
+        "launch calendar"
+      ],
+      "known_context_needs": [
+        "ceramics skill level",
+        "kiln and studio access",
+        "inventory capacity",
+        "sales platform preferences",
+        "local business requirements"
+      ],
+      "avoid": [
+        "pricing below costs",
+        "launching without photos",
+        "ignoring shipping breakage risks"
+      ]
+    },
+    {
+      "goal_id": "G027",
+      "goal_text": "Plan a personal photo essay",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "4 to 12 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "project concept brief",
+        "shot list",
+        "shooting schedule",
+        "editing workflow",
+        "exhibition or sharing plan"
+      ],
+      "known_context_needs": [
+        "subject matter",
+        "camera equipment",
+        "locations and permissions",
+        "visual style preferences",
+        "intended audience"
+      ],
+      "avoid": [
+        "unclear narrative arc",
+        "overcomplicated gear needs",
+        "missing consent for portraits"
+      ]
+    },
+    {
+      "goal_id": "G028",
+      "goal_text": "Compose an original music EP",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "3 to 12 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "songwriting roadmap",
+        "recording schedule",
+        "production budget",
+        "track sequencing draft",
+        "release checklist"
+      ],
+      "known_context_needs": [
+        "genre and influences",
+        "instrument skills",
+        "recording equipment",
+        "collaborators",
+        "distribution goals"
+      ],
+      "avoid": [
+        "starting with no scope limit",
+        "neglecting mixing time",
+        "releasing without metadata"
+      ]
+    },
+    {
+      "goal_id": "G029",
+      "goal_text": "Create a family recipe book",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "recipe collection tracker",
+        "interview question list",
+        "photo plan",
+        "book layout outline",
+        "printing options comparison"
+      ],
+      "known_context_needs": [
+        "family contributors",
+        "recipe formats",
+        "dietary notes",
+        "desired book style",
+        "budget and quantity"
+      ],
+      "avoid": [
+        "losing source attribution",
+        "assuming exact measurements",
+        "choosing printing before page count is known"
+      ]
+    },
+    {
+      "goal_id": "G030",
+      "goal_text": "Build a daily sketching practice",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "1 to 6 months",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "practice schedule",
+        "prompt bank",
+        "materials checklist",
+        "progress tracker",
+        "review routine"
+      ],
+      "known_context_needs": [
+        "current drawing level",
+        "available daily time",
+        "preferred media",
+        "motivation triggers",
+        "workspace constraints"
+      ],
+      "avoid": [
+        "setting unrealistic daily quotas",
+        "buying excessive supplies",
+        "judging early work too harshly"
+      ]
+    },
+    {
+      "goal_id": "G031",
+      "goal_text": "Design a home recording setup",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "equipment shortlist",
+        "room treatment plan",
+        "budget comparison",
+        "setup diagram",
+        "testing checklist"
+      ],
+      "known_context_needs": [
+        "recording purpose",
+        "room dimensions",
+        "noise constraints",
+        "current gear",
+        "software preferences"
+      ],
+      "avoid": [
+        "overspending on unnecessary gear",
+        "ignoring room acoustics",
+        "buying incompatible equipment"
+      ]
+    },
+    {
+      "goal_id": "G032",
+      "goal_text": "Start a newsletter about books",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "newsletter concept brief",
+        "publishing calendar",
+        "issue template",
+        "reader persona notes",
+        "platform comparison"
+      ],
+      "known_context_needs": [
+        "reading interests",
+        "desired audience",
+        "writing cadence",
+        "privacy preferences",
+        "promotion comfort level"
+      ],
+      "avoid": [
+        "copying another newsletter style",
+        "committing to too frequent posting",
+        "ignoring email platform limitations"
+      ]
+    },
+    {
+      "goal_id": "G033",
+      "goal_text": "Sew a custom cosplay costume",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "costume component list",
+        "measurement sheet",
+        "materials budget",
+        "build timeline",
+        "convention packing checklist"
+      ],
+      "known_context_needs": [
+        "character reference images",
+        "sewing skill level",
+        "body measurements",
+        "event date",
+        "tools and workspace"
+      ],
+      "avoid": [
+        "starting without a mockup",
+        "choosing uncomfortable materials",
+        "leaving fittings until the end"
+      ]
+    },
+    {
+      "goal_id": "G034",
+      "goal_text": "Curate a digital art portfolio",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "artwork selection rubric",
+        "portfolio sequence",
+        "artist statement draft",
+        "image preparation checklist",
+        "sharing plan"
+      ],
+      "known_context_needs": [
+        "existing artwork",
+        "portfolio purpose",
+        "preferred platforms",
+        "visual identity",
+        "privacy and copyright concerns"
+      ],
+      "avoid": [
+        "including too many pieces",
+        "low quality image files",
+        "unclear portfolio audience"
+      ]
+    },
+    {
+      "goal_id": "G035",
+      "goal_text": "Make a short documentary film",
+      "anchor_goal_id": null,
+      "domain": "creative_personal",
+      "time_horizon": "3 to 9 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "story treatment",
+        "interview guide",
+        "production schedule",
+        "release forms checklist",
+        "editing plan"
+      ],
+      "known_context_needs": [
+        "documentary topic",
+        "subjects and access",
+        "camera and audio gear",
+        "crew availability",
+        "festival or online release goals"
+      ],
+      "avoid": [
+        "filming without consent",
+        "underestimating audio quality",
+        "collecting footage without a narrative plan"
+      ]
+    },
+    {
+      "goal_id": "G036",
+      "goal_text": "Set up a household budget",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 6 weeks",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "income and expense worksheet",
+        "category budget",
+        "bill calendar",
+        "savings goal tracker",
+        "monthly review checklist"
+      ],
+      "known_context_needs": [
+        "income sources",
+        "fixed and variable expenses",
+        "debt obligations",
+        "shared household responsibilities",
+        "financial goals"
+      ],
+      "avoid": [
+        "generic percentage rules only",
+        "ignoring irregular expenses",
+        "creating a budget that is hard to maintain"
+      ]
+    },
+    {
+      "goal_id": "G037",
+      "goal_text": "Declutter a crowded home office",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "zone by zone plan",
+        "donation and disposal checklist",
+        "storage shopping list",
+        "paper sorting rules",
+        "maintenance routine"
+      ],
+      "known_context_needs": [
+        "room layout",
+        "types of clutter",
+        "work needs",
+        "available storage",
+        "emotional attachment to items"
+      ],
+      "avoid": [
+        "buying organizers before sorting",
+        "trying to finish in one day",
+        "discarding important documents"
+      ]
+    },
+    {
+      "goal_id": "G038",
+      "goal_text": "Prepare a tax filing system",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "document checklist",
+        "deduction tracker",
+        "folder structure",
+        "filing deadline calendar",
+        "tax preparer question list"
+      ],
+      "known_context_needs": [
+        "employment types",
+        "state residency",
+        "dependents",
+        "deductible expenses",
+        "prior year filing method"
+      ],
+      "avoid": [
+        "providing legal tax advice",
+        "mixing personal and business documents",
+        "waiting until deadline week"
+      ]
+    },
+    {
+      "goal_id": "G039",
+      "goal_text": "Plan a kitchen pantry overhaul",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 6 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "pantry inventory",
+        "storage layout plan",
+        "shopping list",
+        "meal category map",
+        "restocking routine"
+      ],
+      "known_context_needs": [
+        "pantry dimensions",
+        "household eating habits",
+        "dietary restrictions",
+        "cooking frequency",
+        "budget for containers"
+      ],
+      "avoid": [
+        "overbuying bulk foods",
+        "ignoring expiration dates",
+        "choosing storage that does not fit shelves"
+      ]
+    },
+    {
+      "goal_id": "G040",
+      "goal_text": "Choose a new health insurance plan",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "plan comparison table",
+        "expected cost estimate",
+        "provider network checklist",
+        "prescription coverage review",
+        "enrollment task list"
+      ],
+      "known_context_needs": [
+        "available plan options",
+        "doctors and medications",
+        "expected medical needs",
+        "household members",
+        "premium and deductible budget"
+      ],
+      "avoid": [
+        "choosing by premium alone",
+        "missing enrollment deadlines",
+        "assuming all providers are in network"
+      ]
+    },
+    {
+      "goal_id": "G041",
+      "goal_text": "Create an emergency preparedness kit",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 6 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "supply checklist",
+        "household contact sheet",
+        "evacuation plan",
+        "medication inventory",
+        "maintenance calendar"
+      ],
+      "known_context_needs": [
+        "household size",
+        "local risks",
+        "pets or medical needs",
+        "storage space",
+        "transportation options"
+      ],
+      "avoid": [
+        "copying generic kit lists only",
+        "forgetting expiration dates",
+        "ignoring pet supplies"
+      ]
+    },
+    {
+      "goal_id": "G042",
+      "goal_text": "Adopt a first rescue cat",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "adoption readiness checklist",
+        "starter supply list",
+        "home safety plan",
+        "shelter visit questions",
+        "first month care schedule"
+      ],
+      "known_context_needs": [
+        "housing pet rules",
+        "budget for care",
+        "allergies",
+        "daily schedule",
+        "experience with pets"
+      ],
+      "avoid": [
+        "adopting before checking lease rules",
+        "underestimating veterinary costs",
+        "skipping gradual adjustment time"
+      ]
+    },
+    {
+      "goal_id": "G043",
+      "goal_text": "Renovate a small bathroom",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "scope definition",
+        "contractor quote tracker",
+        "materials budget",
+        "timeline plan",
+        "temporary bathroom checklist"
+      ],
+      "known_context_needs": [
+        "bathroom dimensions",
+        "desired changes",
+        "home ownership status",
+        "budget range",
+        "permit or building rules"
+      ],
+      "avoid": [
+        "starting demolition too early",
+        "ignoring plumbing constraints",
+        "choosing materials without lead times"
+      ]
+    },
+    {
+      "goal_id": "G044",
+      "goal_text": "Replace an aging laptop",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "needs assessment",
+        "model comparison table",
+        "budget plan",
+        "data backup checklist",
+        "migration schedule"
+      ],
+      "known_context_needs": [
+        "current device issues",
+        "software requirements",
+        "budget",
+        "portability needs",
+        "accessory compatibility"
+      ],
+      "avoid": [
+        "buying based on discounts alone",
+        "forgetting data backups",
+        "overlooking return policies"
+      ]
+    },
+    {
+      "goal_id": "G045",
+      "goal_text": "Build a weekly meal planning routine",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "weekly meal template",
+        "grocery list format",
+        "recipe rotation list",
+        "prep schedule",
+        "food waste tracker"
+      ],
+      "known_context_needs": [
+        "dietary needs",
+        "cooking skill level",
+        "household schedule",
+        "grocery budget",
+        "kitchen equipment"
+      ],
+      "avoid": [
+        "planning unrealistic recipes",
+        "ignoring leftovers",
+        "making the routine too rigid"
+      ]
+    },
+    {
+      "goal_id": "G046",
+      "goal_text": "Organize important family documents",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "2 to 10 weeks",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "document inventory",
+        "secure storage plan",
+        "digital backup checklist",
+        "access permissions list",
+        "annual review reminder"
+      ],
+      "known_context_needs": [
+        "types of documents",
+        "family members involved",
+        "privacy concerns",
+        "current storage locations",
+        "need for originals versus copies"
+      ],
+      "avoid": [
+        "sharing sensitive information insecurely",
+        "discarding originals by mistake",
+        "creating a system nobody can use"
+      ]
+    },
+    {
+      "goal_id": "G047",
+      "goal_text": "Prepare for international travel paperwork",
+      "anchor_goal_id": null,
+      "domain": "everyday_admin_home",
+      "time_horizon": "1 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "passport and visa checklist",
+        "document deadline calendar",
+        "vaccination record list",
+        "travel insurance comparison",
+        "emergency contact packet"
+      ],
+      "known_context_needs": [
+        "destination countries",
+        "citizenship and passport status",
+        "travel dates",
+        "visa requirements",
+        "health and insurance needs"
+      ],
+      "avoid": [
+        "assuming visa rules are static",
+        "waiting on passport renewal",
+        "carrying only digital copies"
+      ]
+    },
+    {
+      "goal_id": "G048",
+      "goal_text": "Plan a community book swap",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "event timeline",
+        "venue checklist",
+        "book sorting rules",
+        "volunteer role list",
+        "promotion plan"
+      ],
+      "known_context_needs": [
+        "expected attendance",
+        "venue options",
+        "book categories",
+        "volunteer availability",
+        "community communication channels"
+      ],
+      "avoid": [
+        "unclear donation rules",
+        "underestimating setup time",
+        "forgetting leftover book plans"
+      ]
+    },
+    {
+      "goal_id": "G049",
+      "goal_text": "Host a neighborhood potluck dinner",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "2 to 8 weeks",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "guest list",
+        "dish signup sheet",
+        "setup checklist",
+        "allergy notes",
+        "cleanup plan"
+      ],
+      "known_context_needs": [
+        "number of neighbors",
+        "hosting space",
+        "dietary restrictions",
+        "date options",
+        "available tables and supplies"
+      ],
+      "avoid": [
+        "duplicate dishes",
+        "unclear arrival times",
+        "forgetting food safety basics"
+      ]
+    },
+    {
+      "goal_id": "G050",
+      "goal_text": "Coordinate a graduation celebration",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "1 to 4 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "guest invitation list",
+        "budget worksheet",
+        "venue comparison",
+        "day of schedule",
+        "photo plan"
+      ],
+      "known_context_needs": [
+        "graduate preferences",
+        "ceremony timing",
+        "guest travel needs",
+        "budget",
+        "family traditions"
+      ],
+      "avoid": [
+        "overbooking the day",
+        "ignoring parking needs",
+        "planning activities the graduate dislikes"
+      ]
+    },
+    {
+      "goal_id": "G051",
+      "goal_text": "Plan a small wedding ceremony",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "3 to 12 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "ceremony timeline",
+        "vendor tracker",
+        "guest list spreadsheet",
+        "budget plan",
+        "day of run sheet"
+      ],
+      "known_context_needs": [
+        "couple priorities",
+        "guest count",
+        "legal requirements",
+        "venue preferences",
+        "family expectations"
+      ],
+      "avoid": [
+        "scope creep",
+        "vendor deposits without terms",
+        "forgetting marriage license timing"
+      ]
+    },
+    {
+      "goal_id": "G052",
+      "goal_text": "Organize a campus career panel",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "speaker outreach email",
+        "panel agenda",
+        "room booking checklist",
+        "promotion schedule",
+        "moderator question list"
+      ],
+      "known_context_needs": [
+        "student audience",
+        "target industries",
+        "speaker availability",
+        "campus booking rules",
+        "hybrid event needs"
+      ],
+      "avoid": [
+        "inviting speakers too late",
+        "unclear panel scope",
+        "neglecting accessibility and recording permissions"
+      ]
+    },
+    {
+      "goal_id": "G053",
+      "goal_text": "Host a baby shower brunch",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "1 to 4 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "guest list",
+        "menu plan",
+        "gift registry communication",
+        "decor checklist",
+        "event schedule"
+      ],
+      "known_context_needs": [
+        "parent preferences",
+        "guest count",
+        "dietary restrictions",
+        "venue or home setup",
+        "budget"
+      ],
+      "avoid": [
+        "surprise plans against preferences",
+        "games guests will dislike",
+        "forgetting seating for older relatives"
+      ]
+    },
+    {
+      "goal_id": "G054",
+      "goal_text": "Plan a volunteer cleanup day",
+      "anchor_goal_id": null,
+      "domain": "events_coordination",
+      "time_horizon": "1 to 3 months",
+      "expected_context_richness": "medium",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "site permission checklist",
+        "volunteer signup form",
+        "supply list",
+        "safety briefing",
+        "post event disposal plan"
+      ],
+      "known_context_needs": [
+        "cleanup location",
+        "expected volunteers",
+        "local disposal rules",
+        "weather risks",
+        "partner organizations"
+      ],
+      "avoid": [
+        "missing permits",
+        "insufficient gloves or bags",
+        "unclear waste disposal logistics"
+      ]
+    },
+    {
+      "goal_id": "G055",
+      "goal_text": "Train for a sprint triathlon",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "3 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "training calendar",
+        "baseline fitness assessment",
+        "gear checklist",
+        "race week plan",
+        "recovery schedule"
+      ],
+      "known_context_needs": [
+        "current swim bike run ability",
+        "race date",
+        "injury history",
+        "training time availability",
+        "access to pool and bike routes"
+      ],
+      "avoid": [
+        "increasing volume too fast",
+        "ignoring swim safety",
+        "skipping rest days"
+      ]
+    },
+    {
+      "goal_id": "G056",
+      "goal_text": "Build a sustainable sleep routine",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "4 to 12 weeks",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "sleep diary template",
+        "wind down routine",
+        "environment checklist",
+        "schedule adjustment plan",
+        "progress review tracker"
+      ],
+      "known_context_needs": [
+        "current sleep and wake times",
+        "work or school schedule",
+        "caffeine and screen habits",
+        "bedroom environment",
+        "stress patterns"
+      ],
+      "avoid": [
+        "medical diagnosis",
+        "unrealistic bedtime shifts",
+        "ignoring shift work or caregiving demands"
+      ]
+    },
+    {
+      "goal_id": "G057",
+      "goal_text": "Start a beginner strength program",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "2 to 4 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "weekly workout plan",
+        "exercise progression chart",
+        "equipment checklist",
+        "form learning resources",
+        "recovery routine"
+      ],
+      "known_context_needs": [
+        "fitness level",
+        "injury history",
+        "available equipment",
+        "training schedule",
+        "goals such as strength or mobility"
+      ],
+      "avoid": [
+        "advanced lifts too soon",
+        "training through pain",
+        "neglecting warmups"
+      ]
+    },
+    {
+      "goal_id": "G058",
+      "goal_text": "Prepare for a backpacking trip",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "conditioning plan",
+        "packing checklist",
+        "route risk assessment",
+        "meal plan",
+        "emergency plan"
+      ],
+      "known_context_needs": [
+        "trip distance and elevation",
+        "current hiking fitness",
+        "weather and terrain",
+        "gear owned",
+        "medical or dietary needs"
+      ],
+      "avoid": [
+        "overpacking",
+        "undertraining for elevation",
+        "ignoring navigation and emergency communication"
+      ]
+    },
+    {
+      "goal_id": "G059",
+      "goal_text": "Manage a low sodium diet",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "1 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "medium",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "food inventory review",
+        "meal plan",
+        "grocery label checklist",
+        "restaurant strategy",
+        "sodium tracking template"
+      ],
+      "known_context_needs": [
+        "medical guidance received",
+        "current eating habits",
+        "cooking skill",
+        "favorite foods",
+        "household meal constraints"
+      ],
+      "avoid": [
+        "replacing clinician advice",
+        "making the diet joyless",
+        "ignoring hidden sodium sources"
+      ]
+    },
+    {
+      "goal_id": "G060",
+      "goal_text": "Return to running",
+      "anchor_goal_id": null,
+      "domain": "health_wellness_training",
+      "time_horizon": "2 to 6 months",
+      "expected_context_richness": "high",
+      "complexity": "high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "return to run schedule",
+        "symptom tracking log",
+        "cross training plan",
+        "shoe and route checklist",
+        "clinician question list"
+      ],
+      "known_context_needs": [
+        "type of injury",
+        "clearance status",
+        "previous running volume",
+        "pain triggers",
+        "available cross training options"
+      ],
+      "avoid": [
+        "medical diagnosis",
+        "ramping mileage too quickly",
+        "ignoring pain signals"
+      ]
+    },
+    {
+      "goal_id": "G061",
+      "goal_text": "Apply to a summer research internship",
+      "anchor_goal_id": null,
+      "domain": "career_education",
+      "time_horizon": "2 to 4 months before application deadlines",
+      "expected_context_richness": "high",
+      "complexity": "moderate to high",
+      "requires_personalization": true,
+      "requires_decomposition": true,
+      "expected_tangible_outputs": [
+        "target internship shortlist",
+        "deadline tracker",
+        "tailored resume",
+        "cover letter drafts",
+        "faculty or supervisor recommendation request emails",
+        "application submission checklist",
+        "interview preparation plan"
+      ],
+      "known_context_needs": [
+        "field of study and research interests",
+        "current degree program and year",
+        "prior coursework projects or publications",
+        "preferred locations or remote options",
+        "eligibility constraints such as citizenship or enrollment status",
+        "available weekly time for applications",
+        "resume or CV history",
+        "recommendation letter contacts",
+        "application deadlines and required materials"
+      ],
+      "avoid": [
+        "generic internship search advice",
+        "assuming a specific discipline without user input",
+        "duplicating full time job search planning",
+        "writing fabricated experience or credentials",
+        "overlooking eligibility and deadline constraints"
+      ]
+    }
+  ]
+}

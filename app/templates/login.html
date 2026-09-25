@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JumpStarter Login</title>
+</head>
+<body>
+    <h2>JumpStarter Login</h2>
+    <form id="login-form" method="POST" action="/login">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <p id="message">{{ message }}</p>
+</body>
+</html>

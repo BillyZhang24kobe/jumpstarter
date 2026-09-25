@@ -1,0 +1,17 @@
+My user has a main purpose:{main_purpose}.
+Please consider the following context information from my user: {user_context}
+
+Please break down the task below into three to six manageable subtasks: {current_task}
+The existing step structure is shown as follows: {existing_tree_structure}.
+
+Please directly give the response that fills in the current subtask: {current_task} in the provided
+task structure.
+
+Format the response like this: 1. [Duration for subtask1] {subtask1 title}: {subtask1 detailed
+description} 2. [Duration for subtask2] {subtask2 title}: {subtask2 detailed description} 3.
+[Duration for subtask3] {subtask3 title}: {subtask3 detailed description}.
+
+Please specify the duration for each subtask in terms of days, weeks or months. For example,
+[1 week], [2-4 weeks], [1 month], and [1-2 months]. Please do not include other texts for
+duration such as [Ongoing]. Please do not include ** in the subtask title. Please directly give the
+response and do not start with "{current subtask title}:

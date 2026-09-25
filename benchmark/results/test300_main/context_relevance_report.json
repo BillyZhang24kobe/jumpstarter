@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "run_dir": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
+  "sessions_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/sessions.jsonl",
+  "output_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_labels.jsonl",
+  "metrics_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_metrics.json",
+  "model": "gpt-5.4-mini",
+  "live": true,
+  "max_workers": 4,
+  "session_count": 4200,
+  "label_count": 89161,
+  "condition_counts": {
+    "full_jumpstarter": 7110,
+    "all_context": 7047,
+    "random_selection": 7137,
+    "no_selection": 7056,
+    "no_elicitation": 1764,
+    "flat_decomposition": 7056,
+    "no_reuse": 7074,
+    "adapt_recursive_decomposition": 37284,
+    "ask_before_plan": 2327,
+    "unstructured_memory_rag": 2653,
+    "long_context_planner": 2653
+  },
+  "selected_label_count": 27238,
+  "reused_label_count": 21312,
+  "relevant_label_count": 24697
+}

@@ -1,0 +1,23 @@
+You are extracting evidence to help evaluate an AI-generated planning artifact.
+
+Use the user context and raw artifact exactly as given. Extract evidence symmetrically for any system or condition; do not favor workflow-style outputs or single-response outputs.
+
+Rules:
+- Do not score quality here.
+- Do not invent missing details.
+- Include concise concrete evidence from the artifact.
+- If evidence is absent, use an empty list.
+- Treat placeholders, TODO fields, unsupported specifics, contradictions, and cleanup burden as important evidence.
+- A workflow artifact can show value through task decomposition, saved context, context reuse, and partial tangible drafts, but clutter and stale process notes are also evidence.
+- A clean prose artifact can show value through directly usable final outputs, but it should not receive credit for context reuse or workflow memory unless the artifact actually shows it.
+
+Return strict JSON matching the schema with these fields:
+- tangible_outputs_found: concrete drafts, schedules, checklists, trackers, surveys, messages, templates, decision aids, or other usable artifacts.
+- confirmed_user_context_used: user-provided facts or constraints from user_context that the artifact uses correctly.
+- unresolved_todos_or_placeholders: TODOs, bracketed placeholders, missing owners/dates/details, or unresolved open decisions.
+- unsupported_or_invented_details: specific names, capacities, deadlines, venues, claims, policies, or personal details that appear unsupported by user_context or are contradicted.
+- workflow_progress_evidence: decomposition, sequencing, partial completions, saved drafts, or multi-step progress shown in the artifact.
+- context_reuse_evidence: evidence that context was elicited, preserved, selected, or reused across subtasks.
+- user_burden_evidence: evidence that the user would need more steering, cleanup, verification, re-explaining, or manual reconciliation.
+- final_actionability_summary: one concise sentence summarizing how ready the artifact is for real-world action.
+- extraction_warnings: caveats about ambiguity, truncation, or evidence that could not be determined.

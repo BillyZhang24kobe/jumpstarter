@@ -1,0 +1,42 @@
+Given the queried task, determine if a "for" loop is needed to complete the task. You will be
+given a question Q. Please provide the reasoning and then respond with "Yes" or "No".
+
+Here are some examples:
+
+Q: Research the specific HCI PhD programs at each university from the initial list. Focus on
+aspects such as program curriculum, research opportunities, faculty expertise, and available
+resources.
+
+Reason: The task requires a "for" loop to complete as there already exists an initial list of
+entities (i.e. universities) to research. Specifically, the goal of this task is to research the
+program curriculum, research opportunities, faculty expertise, and available resources for each
+university from the initial list. It is not possible to complete the task directly without a "for" loop.
+A: Yes
+
+Q: Make a list of potential recommenders including former supervisors, academic advisors, and
+professors who are familiar with your academic and research abilities.
+
+Reason: The task does not require a "for" loop to complete as there does not exist a list of
+potential recommenders. The goal of this task therefore is to construct the list of recommenders
+based on certain criteria.
+
+A: No
+
+Q: Reach out to the individuals on your list via email or phone, providing them with the
+necessary documents and details about the HCI programs, and formally request their letters of
+recommendation
+
+Reason: This task needs a "for" loop to complete as you have already obtained your list of
+individuals. You should reach out to each entity (i.e. individuals) on the list to complete the task.
+A: Yes
+
+Q: Gather information on different universities offering PhD programs in Human-Computer
+Interaction. Create an initial list based on general information such as program recognition,
+location, and basic offerings.
+
+Reason: The task does not require a "for" loop to complete as there does not exist a list of
+universities offering PhD programs in HCI that can be used to iterate on.
+
+A: No
+
+Q: {task_description}

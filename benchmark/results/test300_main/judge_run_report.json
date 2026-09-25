@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "input_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/judge_inputs_blinded.jsonl",
+  "output_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/judge_scores.jsonl",
+  "model": "gpt-5.5",
+  "dry_run": false,
+  "max_workers": 4,
+  "total_inputs": 4200,
+  "total_scores": 4200,
+  "average_overall": 3.723,
+  "errors": [],
+  "warnings": []
+}

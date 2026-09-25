@@ -1,0 +1,42 @@
+{
+  "experiment_id": "workflow_experiment_20260510_012938",
+  "profiles_path": "experiments/benchmark/data/simulation_profiles_test_300.json",
+  "conditions": [
+    "full_jumpstarter",
+    "all_context",
+    "random_selection",
+    "no_selection",
+    "chatgpt_with_elicited_context",
+    "chatgpt_with_structured_summary",
+    "chatgpt_vanilla",
+    "no_elicitation",
+    "flat_decomposition",
+    "no_reuse",
+    "adapt_recursive_decomposition",
+    "ask_before_plan",
+    "unstructured_memory_rag",
+    "long_context_planner"
+  ],
+  "limit": 300,
+  "runs_per_profile": 1,
+  "seed": 42,
+  "model": "gpt-4o",
+  "workflow_model": "gpt-4o",
+  "simulated_user_model": "gpt-4o",
+  "live_stages": "all",
+  "live_simulated_user": true,
+  "max_workers": 6,
+  "runner": "live_workflow_experiment",
+  "prompt_version": "paper_workflow_v1",
+  "prompt_dir": "/home/billyzhang/JourneyLLM/journeyLLM_deploy/experiments/benchmark/prompts/paper_workflow_v1",
+  "prompt_ids": [
+    "context_selection_draft",
+    "global_context_elicitation",
+    "local_context_elicitation",
+    "subtask_detection",
+    "subtask_generation",
+    "task_forking",
+    "task_forking_context_selection",
+    "working_solution_draft_creation"
+  ]
+}

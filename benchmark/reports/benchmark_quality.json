@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "total_goals": 60,
+  "source_counts": {
+    "anchor": 12,
+    "generated": 48
+  },
+  "domain_counts": {
+    "events_coordination": 10,
+    "career_education": 16,
+    "creative_personal": 14,
+    "everyday_admin_home": 14,
+    "health_wellness_training": 6
+  },
+  "personalization_count": 60,
+  "decomposition_count": 60,
+  "anchor_counts": {
+    "human_study_trace": 9,
+    "ablation_trace": 3
+  },
+  "errors": [],
+  "warnings": []
+}

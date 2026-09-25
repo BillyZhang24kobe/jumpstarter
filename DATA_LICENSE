@@ -1,0 +1,19 @@
+The JumpStarter benchmark data and results are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+This covers the contents of:
+
+  benchmark/data/      benchmark goals, personas, simulation profiles, splits, and simulated-user calibration
+  benchmark/results/   judged results of the runs reported in the paper
+  benchmark/reports/   data-construction, calibration, and analysis reports
+
+Copyright (c) 2026 Xuanming Zhang, Sitong Wang, Jenny Ma, Alyssa Hwang, Zhou Yu, and Lydia Chilton
+
+You are free to share and adapt this material for any purpose, including commercially,
+as long as you give appropriate credit, provide a link to the license, and indicate if
+changes were made. Please credit the data by citing the JumpStarter paper (see README.md).
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+The code in this repository is licensed separately under the MIT License (see LICENSE).

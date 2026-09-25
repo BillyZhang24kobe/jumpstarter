@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.release_export
+
+# Secrets and local app state
+.env
+api_secrets.py
+app/uploads/*
+!app/uploads/.gitkeep
+
+# New benchmark runs and redrawn figures
+benchmark/runs/
+/figures/

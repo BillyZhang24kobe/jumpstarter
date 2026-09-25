@@ -1,0 +1,57 @@
+{
+  "valid": true,
+  "experiment_id": "workflow_experiment_20260710_234004",
+  "total_sessions": 300,
+  "total_profiles": 300,
+  "conditions": [
+    "single_turn_decomposition"
+  ],
+  "runs_per_profile": 1,
+  "max_workers": 6,
+  "workflow_model": "gpt-4o",
+  "simulated_user_model": "gpt-4o",
+  "live_stages": "all",
+  "live_simulated_user": true,
+  "condition_counts": {
+    "single_turn_decomposition": 300
+  },
+  "expected_sessions": 300,
+  "grid_complete": true,
+  "artifact_count": 300,
+  "judge_input_count": 300,
+  "average_output_words": 357.42,
+  "average_selected_context_items": 0.0,
+  "average_reused_context_items": 0.0,
+  "workflow_fidelity": {
+    "valid": true,
+    "total_sessions": 300,
+    "condition_counts": {
+      "single_turn_decomposition": 300
+    },
+    "average_user_response_words": 13.64,
+    "max_user_response_words": 62,
+    "front_loading_events": 28,
+    "unknown_answer_events": 603,
+    "pushback_events": 0,
+    "approval_events": 0,
+    "private_fact_leakage_events": 0,
+    "subtask_detection_events": 0,
+    "decompose_further_events": 0,
+    "task_forking_detection_events": 0,
+    "task_forking_events": 0,
+    "context_selection_events": 0,
+    "saved_local_context_events": 0,
+    "completed_subtasks": 0,
+    "stage_counts": {
+      "goal_entry": 300,
+      "global_context_elicitation": 1800,
+      "one_shot_response": 300,
+      "final_review": 300
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "output_dir": "experiments/benchmark/runs/single_turn_decomposition_test300",
+  "errors": [],
+  "warnings": []
+}

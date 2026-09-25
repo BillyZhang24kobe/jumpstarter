@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* body { font-family: Arial, sans-serif; justify-content: center; } */
+  #app { margin-top: 50px; margin-left: 450px;}
+  #taskInput { width: 60%; padding: 10px; }
+  #startButton { padding: 10px 20px; margin-top: 10px; }
+</style>
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<title>JumpStarter</title>
+<body>
+<div id="app">
+  <div class="header-container">
+    <h1>JumpStarter</h1>
+    <br>
+    <input type="text" id="taskInput" name="task" placeholder="Input your task here. For example, 'Apply for a PhD'">
+  <!-- <input type="file" name="files" id="fileInput" multiple> -->
+    <button class="sd-button" id="startRootButton">Start</button>
+  </div>
+  <div id="spinner-div" class="pt-5">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+  </div>
+    <!-- <input type="file" name="file"> -->
+  <!-- </form> -->
+
+  <br>
+  <br>
+
+  <div class="modal" id="context-eli-modal">
+    <div class="modal-content">
+        <span class="close" id="context-eli-close">&times;</span>
+        <div id="context-eli-header">
+            <h5>To get you started, we suggest you providing the following extra info. You can skip them or add your own info. </h5>
+            <form class="global-form-group" id="globalFormGroup" action="/task" method="post" enctype="multipart/form-data">
+                <div class="elicit-root-gpt" id="elicitRootGpt"></div>
+                <div class="elicit-root-user">
+                  <h5>Add your own context</h5>
+                  <div class="form-group">
+                      <input type="text" id="customName" name="customName" placeholder="Context name. E.g. Travel Duration" style="margin-right: 45px">
+                      <input type="text" id="customContent" name="customContent" placeholder="Context content. E.g. One week.">
+                      <span style="margin:5px"> OR </span>
+                      <input type="file" id="customFile" name="customFile">
+                  </div>
+                </div>
+                <button class="sd-button" type="submit">Let's get started!</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  
+    <h3 hidden>Past Documents Edited</h3>
+    <ul id="task-list" hidden></ul>
+    <script>
+
+      // context elicitation modal in the home page
+      var context_eli_modal = document.getElementById('context-eli-modal');
+      var context_eli_modal_span = document.getElementById("context-eli-close");
+      context_eli_modal_span.onclick = function() {
+          context_eli_modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target == context_eli_modal) {
+              context_eli_modal.style.display = "none";
+          }
+      }
+
+      var startRootButton = document.getElementById('startRootButton');
+      startRootButton.onclick = function() {
+          var taskInput = document.getElementById('taskInput').value;
+
+          // save taskinput as a hidden input field to form data
+          let hiddenTaskInput = document.createElement('input');
+          hiddenTaskInput.type = 'hidden';
+          hiddenTaskInput.name = 'task_input';
+          hiddenTaskInput.value = taskInput;
+
+          // Append the hidden input field to the form
+          document.querySelector('form').appendChild(hiddenTaskInput);
+
+          let data = {
+                task: taskInput,
+                // user_context: {}
+          };
+          $.ajax({
+              type: 'POST',
+              url: '/elicit_context_root',
+              data: JSON.stringify(data),
+              contentType: 'application/json',
+              beforeSend: function() {
+                  $("#spinner-div").show()
+              },
+              success: function(response) {
+                  console.log('response from elicit context root:', response);
+                  context = response['context'];  // context is a list of objects:{ "name": name_el, "description": reason_el, "type": type_el, "question": question_el }
+
+                  // check if context is empty
+                  if (context.length > 0) {
+                      // pop up window for context elicitation
+                      context_eli_modal.style.display = "block";
+
+                      const elicit_root_gpt_div = document.getElementById('elicitRootGpt');
+
+                      // iterate over the context (a list of object) and add it to the model
+                      context.forEach(contextObj => {
+                          const contextDesc = contextObj['description'];
+                          const contextType = contextObj['type'];
+                          const question = contextObj['question'];
+                          const contextName = contextObj['name'];
+                          // create a new form group
+                          const newFormGroup = document.createElement('div');
+                          newFormGroup.className = 'form-group';
+                          if (contextType === 'INFO') {
+                                newFormGroup.innerHTML = `
+                                    <label for="${contextName}" title="${contextDesc}">${question}</label>
+                                    <input type="text" id="${contextName}" name="${contextName}" placeholder="Type your input here ...">`;
+                          } else {
+                                newFormGroup.innerHTML = `
+                                    <label for="${contextName}" title="${contextDesc}">${question}</label>
+                                    <input type="file" id="${contextName}File" name="${contextName}File">`;
+                          }
+                          // prepend the new form group to the existing form
+                          elicit_root_gpt_div.appendChild(newFormGroup);
+                      });
+                  }
+              },
+              error: function(error) {
+                  console.log('error:', error);
+              },
+              complete: function () { 
+                  $("#spinner-div").hide()
+              }
+          });
+      }
+
+      // get existing tasks from the backend. The returned data is a dictionary of tasks: {taskId: task_object }
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the username from the server-side rendering
+        var username = "{{ username }}"; 
+
+        // add hidden input to the form
+        if (username) {
+            // Create a hidden input field
+            let hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'username';
+            hiddenInput.value = username;
+
+            // Append the hidden input field to the form
+            document.querySelector('form').appendChild(hiddenInput);
+        }
+        
+        fetch('/get_tasks?username=' + encodeURIComponent(username))
+          .then(response => response.json())
+          .then(data => {
+              console.log('data:', data);  // data is a list of dictionaries (objects)
+              var taskList = document.getElementById('task-list');
+              for(var i = 0; i < data.length; i++) {
+                  var task = data[i];
+                  var taskItem = document.createElement('li');
+                  var taskLink = document.createElement('a');
+                  taskLink.href = '/task_continue?username=' + username + '&taskId=' + i;
+                  // taskLink.target = '_blank';
+                  taskLink.textContent = task['task_input'];
+                  taskItem.appendChild(taskLink);
+                  taskList.appendChild(taskItem);
+              }
+          })
+        
+      });
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3424 @@
+{
+  "valid": true,
+  "run_dir": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
+  "baseline_condition": "full_jumpstarter",
+  "score_count": 4200,
+  "condition_count": 14,
+  "conditions": [
+    "adapt_recursive_decomposition",
+    "all_context",
+    "ask_before_plan",
+    "chatgpt_vanilla",
+    "chatgpt_with_elicited_context",
+    "chatgpt_with_structured_summary",
+    "flat_decomposition",
+    "full_jumpstarter",
+    "long_context_planner",
+    "no_elicitation",
+    "no_reuse",
+    "no_selection",
+    "random_selection",
+    "unstructured_memory_rag"
+  ],
+  "condition_summaries": [
+    {
+      "condition": "adapt_recursive_decomposition",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.0538,
+        "median": 4.1,
+        "std": 0.328,
+        "stderr": 0.0189
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.75,
+        "median": 4.0,
+        "std": 0.4337,
+        "stderr": 0.025
+      },
+      "rubric_means": {
+        "plan_quality": 3.72,
+        "tangible_result_quality": 4.0833,
+        "confidence_support": 3.3633,
+        "workflow_progress_support": 4.05,
+        "user_burden_reduction": 2.83
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 2631.7633,
+        "median": 2799.0,
+        "std": 514.4456,
+        "stderr": 29.7015
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 7.7333,
+        "median": 8.0,
+        "std": 1.0356,
+        "stderr": 0.0598
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 7.7333,
+        "median": 8.0,
+        "std": 1.0356,
+        "stderr": 0.0598
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 161.2333,
+        "median": 165.5,
+        "std": 28.4742,
+        "stderr": 1.644
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 161.2333,
+        "median": 165.5,
+        "std": 28.4742,
+        "stderr": 1.644
+      },
+      "context_precision_proxy": {
+        "count": 300,
+        "mean": 0.7378,
+        "median": 0.7292,
+        "std": 0.169,
+        "stderr": 0.0098
+      },
+      "context_recall_proxy": {
+        "count": 300,
+        "mean": 0.9442,
+        "median": 0.9545,
+        "std": 0.04,
+        "stderr": 0.0023
+      },
+      "selected_relevance_score_mean": {
+        "count": 300,
+        "mean": 0.3279,
+        "median": 0.323,
+        "std": 0.0727,
+        "stderr": 0.0042
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 3.88,
+          "median": 4.0,
+          "std": 0.8007,
+          "stderr": 0.0462
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 3.1633,
+          "median": 3.0,
+          "std": 0.3703,
+          "stderr": 0.0214
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 7.7333,
+          "median": 8.0,
+          "std": 1.0356,
+          "stderr": 0.0598
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 7.7333,
+          "median": 8.0,
+          "std": 1.0356,
+          "stderr": 0.0598
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 11.2233,
+          "median": 12.0,
+          "std": 2.3477,
+          "stderr": 0.1355
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 7.3433,
+          "median": 8.0,
+          "std": 1.6085,
+          "stderr": 0.0929
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.6496,
+          "median": 0.6667,
+          "std": 0.0385,
+          "stderr": 0.0022
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 300,
+          "mean": 0.7549,
+          "median": 0.75,
+          "std": 0.0961,
+          "stderr": 0.0055
+        },
+        "gpt_context_recall": {
+          "count": 300,
+          "mean": 0.7104,
+          "median": 0.7041,
+          "std": 0.0828,
+          "stderr": 0.0048
+        },
+        "gpt_context_f1": {
+          "count": 300,
+          "mean": 0.7268,
+          "median": 0.7312,
+          "std": 0.0634,
+          "stderr": 0.0037
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.6865,
+          "median": 0.6855,
+          "std": 0.0593,
+          "stderr": 0.0034
+        },
+        "gpt_reused_context_precision": {
+          "count": 300,
+          "mean": 0.7549,
+          "median": 0.75,
+          "std": 0.0961,
+          "stderr": 0.0055
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.6865,
+          "median": 0.6855,
+          "std": 0.0593,
+          "stderr": 0.0034
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 26.3933,
+          "median": 26.5,
+          "std": 6.9305,
+          "stderr": 0.4001
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 300,
+          "mean": 0.7104,
+          "median": 0.7041,
+          "std": 0.0828,
+          "stderr": 0.0048
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.3173,
+          "median": 0.3138,
+          "std": 0.0302,
+          "stderr": 0.0017
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 37.68,
+          "median": 38.0,
+          "std": 9.922,
+          "stderr": 0.5728
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 26.3933,
+          "median": 26.5,
+          "std": 6.9305,
+          "stderr": 0.4001
+        }
+      }
+    },
+    {
+      "condition": "all_context",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.0817,
+        "median": 4.1,
+        "std": 0.4536,
+        "stderr": 0.0262
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.8433,
+        "median": 4.0,
+        "std": 0.5656,
+        "stderr": 0.0327
+      },
+      "rubric_means": {
+        "plan_quality": 3.87,
+        "tangible_result_quality": 4.1567,
+        "confidence_support": 3.5533,
+        "workflow_progress_support": 4.17,
+        "user_burden_reduction": 3.12
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 1117.3367,
+        "median": 1106.5,
+        "std": 243.9287,
+        "stderr": 14.0832
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 8.8867,
+        "median": 9.0,
+        "std": 0.4632,
+        "stderr": 0.0267
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 3.4133,
+        "median": 4.0,
+        "std": 1.1721,
+        "stderr": 0.0677
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 436.7267,
+        "median": 469.0,
+        "std": 190.302,
+        "stderr": 10.9871
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 436.7267,
+        "median": 469.0,
+        "std": 190.302,
+        "stderr": 10.9871
+      },
+      "context_precision_proxy": {
+        "count": 300,
+        "mean": 0.1424,
+        "median": 0.125,
+        "std": 0.1028,
+        "stderr": 0.0059
+      },
+      "context_recall_proxy": {
+        "count": 258,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 300,
+        "mean": 0.084,
+        "median": 0.0814,
+        "std": 0.0493,
+        "stderr": 0.0028
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9433,
+          "median": 7.0,
+          "std": 0.2316,
+          "stderr": 0.0134
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.1233,
+          "median": 1.0,
+          "std": 0.8188,
+          "stderr": 0.0473
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.82,
+          "median": 6.0,
+          "std": 0.8544,
+          "stderr": 0.0493
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.8667,
+          "median": 3.0,
+          "std": 0.8934,
+          "stderr": 0.0516
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 2.0,
+          "median": 2.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 8.8867,
+          "median": 9.0,
+          "std": 0.4632,
+          "stderr": 0.0267
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 3.4133,
+          "median": 4.0,
+          "std": 1.1721,
+          "stderr": 0.0677
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 3.75,
+          "median": 4.0,
+          "std": 0.6017,
+          "stderr": 0.0347
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 2.4367,
+          "median": 3.0,
+          "std": 0.9357,
+          "stderr": 0.054
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 2.3233,
+          "median": 3.0,
+          "std": 0.9531,
+          "stderr": 0.055
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9433,
+          "median": 4.0,
+          "std": 0.2316,
+          "stderr": 0.0134
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 2.9533,
+          "median": 3.0,
+          "std": 0.8407,
+          "stderr": 0.0485
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.7486,
+          "median": 0.75,
+          "std": 0.2089,
+          "stderr": 0.0121
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 300,
+          "mean": 0.2186,
+          "median": 0.2083,
+          "std": 0.0948,
+          "stderr": 0.0055
+        },
+        "gpt_context_recall": {
+          "count": 297,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_context_f1": {
+          "count": 297,
+          "mean": 0.3521,
+          "median": 0.3448,
+          "std": 0.1275,
+          "stderr": 0.0074
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.253,
+          "median": 0.2598,
+          "std": 0.0666,
+          "stderr": 0.0038
+        },
+        "gpt_reused_context_precision": {
+          "count": 297,
+          "mean": 0.4958,
+          "median": 0.5,
+          "std": 0.2435,
+          "stderr": 0.0141
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.4743,
+          "median": 0.479,
+          "std": 0.1537,
+          "stderr": 0.0089
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 4.13,
+          "median": 4.0,
+          "std": 2.2606,
+          "stderr": 0.1305
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 297,
+          "mean": 0.8125,
+          "median": 1.0,
+          "std": 0.2809,
+          "stderr": 0.0163
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.253,
+          "median": 0.2598,
+          "std": 0.0666,
+          "stderr": 0.0038
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 5.13,
+          "median": 5.0,
+          "std": 2.2517,
+          "stderr": 0.13
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 5.13,
+          "median": 5.0,
+          "std": 2.2517,
+          "stderr": 0.13
+        }
+      }
+    },
+    {
+      "condition": "ask_before_plan",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.2208,
+        "median": 3.15,
+        "std": 0.5062,
+        "stderr": 0.0292
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.1433,
+        "median": 3.0,
+        "std": 0.6033,
+        "stderr": 0.0348
+      },
+      "rubric_means": {
+        "plan_quality": 3.2067,
+        "tangible_result_quality": 3.0967,
+        "confidence_support": 2.7833,
+        "workflow_progress_support": 3.23,
+        "user_burden_reduction": 2.4033
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 570.56,
+        "median": 566.5,
+        "std": 139.7931,
+        "stderr": 8.071
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 5.12,
+        "median": 5.0,
+        "std": 2.2707,
+        "stderr": 0.1311
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 5.12,
+        "median": 5.0,
+        "std": 2.2707,
+        "stderr": 0.1311
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 170.5667,
+        "median": 168.0,
+        "std": 94.2645,
+        "stderr": 5.4424
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 170.5667,
+        "median": 168.0,
+        "std": 94.2645,
+        "stderr": 5.4424
+      },
+      "context_precision_proxy": {
+        "count": 288,
+        "mean": 0.2386,
+        "median": 0.0,
+        "std": 0.3964,
+        "stderr": 0.0234
+      },
+      "context_recall_proxy": {
+        "count": 81,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 288,
+        "mean": 0.1392,
+        "median": 0.0595,
+        "std": 0.1448,
+        "stderr": 0.0085
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.4833,
+          "median": 1.0,
+          "std": 0.6767,
+          "stderr": 0.0391
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 1.5167,
+          "median": 2.0,
+          "std": 0.6767,
+          "stderr": 0.0391
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 5.12,
+          "median": 5.0,
+          "std": 2.2707,
+          "stderr": 0.1311
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 5.12,
+          "median": 5.0,
+          "std": 2.2707,
+          "stderr": 0.1311
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.96,
+          "median": 1.0,
+          "std": 0.1963,
+          "stderr": 0.0113
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 288,
+          "mean": 0.984,
+          "median": 1.0,
+          "std": 0.0809,
+          "stderr": 0.0048
+        },
+        "gpt_context_recall": {
+          "count": 297,
+          "mean": 0.8921,
+          "median": 1.0,
+          "std": 0.2202,
+          "stderr": 0.0128
+        },
+        "gpt_context_f1": {
+          "count": 287,
+          "mean": 0.9454,
+          "median": 1.0,
+          "std": 0.1029,
+          "stderr": 0.0061
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 288,
+          "mean": 0.8879,
+          "median": 0.9082,
+          "std": 0.0718,
+          "stderr": 0.0042
+        },
+        "gpt_reused_context_precision": {
+          "count": 288,
+          "mean": 0.984,
+          "median": 1.0,
+          "std": 0.0809,
+          "stderr": 0.0048
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 288,
+          "mean": 0.8879,
+          "median": 0.9082,
+          "std": 0.0718,
+          "stderr": 0.0042
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 5.0367,
+          "median": 5.0,
+          "std": 2.2343,
+          "stderr": 0.129
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 297,
+          "mean": 0.8921,
+          "median": 1.0,
+          "std": 0.2202,
+          "stderr": 0.0128
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.6682,
+          "median": 0.6633,
+          "std": 0.1457,
+          "stderr": 0.0084
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 5.5867,
+          "median": 5.0,
+          "std": 2.0453,
+          "stderr": 0.1181
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 5.0367,
+          "median": 5.0,
+          "std": 2.2343,
+          "stderr": 0.129
+        }
+      }
+    },
+    {
+      "condition": "chatgpt_vanilla",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.7507,
+        "median": 3.75,
+        "std": 0.3946,
+        "stderr": 0.0228
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.8333,
+        "median": 4.0,
+        "std": 0.4827,
+        "stderr": 0.0279
+      },
+      "rubric_means": {
+        "plan_quality": 3.9733,
+        "tangible_result_quality": 4.1633,
+        "confidence_support": 3.52,
+        "workflow_progress_support": 3.92,
+        "user_burden_reduction": 3.1367
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 275.4833,
+        "median": 273.0,
+        "std": 58.7241,
+        "stderr": 3.3904
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {}
+    },
+    {
+      "condition": "chatgpt_with_elicited_context",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.6992,
+        "median": 3.7,
+        "std": 0.424,
+        "stderr": 0.0245
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.7267,
+        "median": 4.0,
+        "std": 0.5028,
+        "stderr": 0.029
+      },
+      "rubric_means": {
+        "plan_quality": 3.8333,
+        "tangible_result_quality": 3.8033,
+        "confidence_support": 3.4233,
+        "workflow_progress_support": 3.7767,
+        "user_burden_reduction": 2.93
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 267.7167,
+        "median": 267.0,
+        "std": 55.3353,
+        "stderr": 3.1948
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.04,
+          "median": 1.0,
+          "std": 0.5711,
+          "stderr": 0.033
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 1.96,
+          "median": 2.0,
+          "std": 0.5711,
+          "stderr": 0.033
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {}
+    },
+    {
+      "condition": "chatgpt_with_structured_summary",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.7215,
+        "median": 3.75,
+        "std": 0.418,
+        "stderr": 0.0241
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.7433,
+        "median": 4.0,
+        "std": 0.5276,
+        "stderr": 0.0305
+      },
+      "rubric_means": {
+        "plan_quality": 3.8567,
+        "tangible_result_quality": 3.95,
+        "confidence_support": 3.4167,
+        "workflow_progress_support": 3.81,
+        "user_burden_reduction": 2.9933
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 270.0167,
+        "median": 270.0,
+        "std": 60.0787,
+        "stderr": 3.4686
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.9867,
+          "median": 1.0,
+          "std": 0.5545,
+          "stderr": 0.032
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 2.0133,
+          "median": 2.0,
+          "std": 0.5545,
+          "stderr": 0.032
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {}
+    },
+    {
+      "condition": "flat_decomposition",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.2698,
+        "median": 4.25,
+        "std": 0.4107,
+        "stderr": 0.0237
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 4.0833,
+        "median": 4.0,
+        "std": 0.5072,
+        "stderr": 0.0293
+      },
+      "rubric_means": {
+        "plan_quality": 4.0933,
+        "tangible_result_quality": 4.3833,
+        "confidence_support": 3.7,
+        "workflow_progress_support": 4.3367,
+        "user_burden_reduction": 3.2733
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 1086.6167,
+        "median": 1079.5,
+        "std": 200.4133,
+        "stderr": 11.5709
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 2.3433,
+        "median": 2.0,
+        "std": 1.1238,
+        "stderr": 0.0649
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 2.3433,
+        "median": 2.0,
+        "std": 1.1238,
+        "stderr": 0.0649
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 268.4933,
+        "median": 232.5,
+        "std": 187.7486,
+        "stderr": 10.8397
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 268.4933,
+        "median": 232.5,
+        "std": 187.7486,
+        "stderr": 10.8397
+      },
+      "context_precision_proxy": {
+        "count": 297,
+        "mean": 0.5639,
+        "median": 0.6,
+        "std": 0.3063,
+        "stderr": 0.0178
+      },
+      "context_recall_proxy": {
+        "count": 264,
+        "mean": 0.9462,
+        "median": 1.0,
+        "std": 0.1193,
+        "stderr": 0.0073
+      },
+      "selected_relevance_score_mean": {
+        "count": 297,
+        "mean": 0.2919,
+        "median": 0.3129,
+        "std": 0.1362,
+        "stderr": 0.0079
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9467,
+          "median": 7.0,
+          "std": 0.2251,
+          "stderr": 0.013
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.0833,
+          "median": 1.0,
+          "std": 0.7472,
+          "stderr": 0.0431
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.8633,
+          "median": 6.0,
+          "std": 0.7703,
+          "stderr": 0.0445
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 2.3433,
+          "median": 2.0,
+          "std": 1.1238,
+          "stderr": 0.0649
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 2.3433,
+          "median": 2.0,
+          "std": 1.1238,
+          "stderr": 0.0649
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 3.7,
+          "median": 4.0,
+          "std": 0.7059,
+          "stderr": 0.0408
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 1.5633,
+          "median": 2.0,
+          "std": 1.0754,
+          "stderr": 0.0621
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 1.4333,
+          "median": 1.0,
+          "std": 1.021,
+          "stderr": 0.0589
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9467,
+          "median": 4.0,
+          "std": 0.2251,
+          "stderr": 0.013
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 2.92,
+          "median": 3.0,
+          "std": 0.9469,
+          "stderr": 0.0547
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.7397,
+          "median": 0.75,
+          "std": 0.237,
+          "stderr": 0.0137
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 297,
+          "mean": 0.7205,
+          "median": 0.75,
+          "std": 0.2471,
+          "stderr": 0.0143
+        },
+        "gpt_context_recall": {
+          "count": 299,
+          "mean": 0.5956,
+          "median": 0.6,
+          "std": 0.2481,
+          "stderr": 0.0143
+        },
+        "gpt_context_f1": {
+          "count": 289,
+          "mean": 0.6413,
+          "median": 0.6667,
+          "std": 0.184,
+          "stderr": 0.0108
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.6208,
+          "median": 0.645,
+          "std": 0.1678,
+          "stderr": 0.0097
+        },
+        "gpt_reused_context_precision": {
+          "count": 297,
+          "mean": 0.7205,
+          "median": 0.75,
+          "std": 0.2471,
+          "stderr": 0.0143
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.6208,
+          "median": 0.645,
+          "std": 0.1678,
+          "stderr": 0.0097
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 3.6667,
+          "median": 3.0,
+          "std": 1.9446,
+          "stderr": 0.1123
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 299,
+          "mean": 0.5956,
+          "median": 0.6,
+          "std": 0.2481,
+          "stderr": 0.0143
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.2836,
+          "median": 0.2938,
+          "std": 0.0708,
+          "stderr": 0.0041
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 6.2867,
+          "median": 6.0,
+          "std": 2.3544,
+          "stderr": 0.1359
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 3.6667,
+          "median": 3.0,
+          "std": 1.9446,
+          "stderr": 0.1123
+        }
+      }
+    },
+    {
+      "condition": "full_jumpstarter",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.1967,
+        "median": 4.25,
+        "std": 0.4206,
+        "stderr": 0.0243
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.9667,
+        "median": 4.0,
+        "std": 0.5097,
+        "stderr": 0.0294
+      },
+      "rubric_means": {
+        "plan_quality": 4.0367,
+        "tangible_result_quality": 4.0267,
+        "confidence_support": 3.6933,
+        "workflow_progress_support": 4.5067,
+        "user_burden_reduction": 3.29
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 1077.7633,
+        "median": 1064.0,
+        "std": 138.6836,
+        "stderr": 8.0069
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 2.3367,
+        "median": 2.0,
+        "std": 1.0426,
+        "stderr": 0.0602
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 2.3367,
+        "median": 2.0,
+        "std": 1.0426,
+        "stderr": 0.0602
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 266.87,
+        "median": 245.5,
+        "std": 182.6746,
+        "stderr": 10.5467
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 266.87,
+        "median": 245.5,
+        "std": 182.6746,
+        "stderr": 10.5467
+      },
+      "context_precision_proxy": {
+        "count": 297,
+        "mean": 0.5381,
+        "median": 0.5,
+        "std": 0.3017,
+        "stderr": 0.0175
+      },
+      "context_recall_proxy": {
+        "count": 260,
+        "mean": 0.9134,
+        "median": 1.0,
+        "std": 0.1527,
+        "stderr": 0.0095
+      },
+      "selected_relevance_score_mean": {
+        "count": 297,
+        "mean": 0.2748,
+        "median": 0.2795,
+        "std": 0.1389,
+        "stderr": 0.0081
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9667,
+          "median": 7.0,
+          "std": 0.1798,
+          "stderr": 0.0104
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.1633,
+          "median": 1.0,
+          "std": 0.7694,
+          "stderr": 0.0444
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.8033,
+          "median": 6.0,
+          "std": 0.7874,
+          "stderr": 0.0455
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.9167,
+          "median": 3.0,
+          "std": 0.8939,
+          "stderr": 0.0516
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.9933,
+          "median": 2.0,
+          "std": 0.0815,
+          "stderr": 0.0047
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 2.3367,
+          "median": 2.0,
+          "std": 1.0426,
+          "stderr": 0.0602
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 2.3367,
+          "median": 2.0,
+          "std": 1.0426,
+          "stderr": 0.0602
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 3.7733,
+          "median": 4.0,
+          "std": 0.6136,
+          "stderr": 0.0354
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 1.5933,
+          "median": 2.0,
+          "std": 1.1009,
+          "stderr": 0.0636
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 1.4,
+          "median": 1.0,
+          "std": 0.978,
+          "stderr": 0.0565
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9667,
+          "median": 4.0,
+          "std": 0.1798,
+          "stderr": 0.0104
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 2.8767,
+          "median": 3.0,
+          "std": 0.9115,
+          "stderr": 0.0526
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.7247,
+          "median": 0.75,
+          "std": 0.2273,
+          "stderr": 0.0131
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 297,
+          "mean": 0.5536,
+          "median": 0.5833,
+          "std": 0.2862,
+          "stderr": 0.0166
+        },
+        "gpt_context_recall": {
+          "count": 292,
+          "mean": 0.5981,
+          "median": 0.6,
+          "std": 0.2946,
+          "stderr": 0.0172
+        },
+        "gpt_context_f1": {
+          "count": 270,
+          "mean": 0.5988,
+          "median": 0.6077,
+          "std": 0.205,
+          "stderr": 0.0125
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.5196,
+          "median": 0.535,
+          "std": 0.1668,
+          "stderr": 0.0097
+        },
+        "gpt_reused_context_precision": {
+          "count": 297,
+          "mean": 0.5536,
+          "median": 0.5833,
+          "std": 0.2862,
+          "stderr": 0.0166
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.5196,
+          "median": 0.535,
+          "std": 0.1668,
+          "stderr": 0.0097
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 2.8733,
+          "median": 3.0,
+          "std": 1.8821,
+          "stderr": 0.1087
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 292,
+          "mean": 0.5981,
+          "median": 0.6,
+          "std": 0.2946,
+          "stderr": 0.0172
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.238,
+          "median": 0.2358,
+          "std": 0.0674,
+          "stderr": 0.0039
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 4.7533,
+          "median": 5.0,
+          "std": 2.3174,
+          "stderr": 0.1338
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 2.8733,
+          "median": 3.0,
+          "std": 1.8821,
+          "stderr": 0.1087
+        }
+      }
+    },
+    {
+      "condition": "long_context_planner",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.2423,
+        "median": 3.2,
+        "std": 0.3768,
+        "stderr": 0.0218
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.16,
+        "median": 3.0,
+        "std": 0.4638,
+        "stderr": 0.0268
+      },
+      "rubric_means": {
+        "plan_quality": 3.2,
+        "tangible_result_quality": 3.1533,
+        "confidence_support": 2.7733,
+        "workflow_progress_support": 3.2767,
+        "user_burden_reduction": 2.38
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 399.8067,
+        "median": 402.0,
+        "std": 37.5185,
+        "stderr": 2.1661
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 4.0367,
+        "median": 4.0,
+        "std": 0.3402,
+        "stderr": 0.0196
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 4.0367,
+        "median": 4.0,
+        "std": 0.3402,
+        "stderr": 0.0196
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 38.7767,
+        "median": 38.0,
+        "std": 5.2921,
+        "stderr": 0.3055
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 38.7767,
+        "median": 38.0,
+        "std": 5.2921,
+        "stderr": 0.3055
+      },
+      "context_precision_proxy": {
+        "count": 300,
+        "mean": 0.1185,
+        "median": 0.0,
+        "std": 0.2043,
+        "stderr": 0.0118
+      },
+      "context_recall_proxy": {
+        "count": 85,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 300,
+        "mean": 0.0884,
+        "median": 0.0456,
+        "std": 0.0756,
+        "stderr": 0.0044
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 4.0367,
+          "median": 4.0,
+          "std": 0.3402,
+          "stderr": 0.0196
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 4.0367,
+          "median": 4.0,
+          "std": 0.3402,
+          "stderr": 0.0196
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 300,
+          "mean": 0.865,
+          "median": 1.0,
+          "std": 0.1685,
+          "stderr": 0.0097
+        },
+        "gpt_context_recall": {
+          "count": 300,
+          "mean": 0.998,
+          "median": 1.0,
+          "std": 0.0199,
+          "stderr": 0.0012
+        },
+        "gpt_context_f1": {
+          "count": 300,
+          "mean": 0.9168,
+          "median": 1.0,
+          "std": 0.1085,
+          "stderr": 0.0063
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.7865,
+          "median": 0.8125,
+          "std": 0.1207,
+          "stderr": 0.007
+        },
+        "gpt_reused_context_precision": {
+          "count": 300,
+          "mean": 0.865,
+          "median": 1.0,
+          "std": 0.1685,
+          "stderr": 0.0097
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.7865,
+          "median": 0.8125,
+          "std": 0.1207,
+          "stderr": 0.007
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 3.49,
+          "median": 4.0,
+          "std": 0.7199,
+          "stderr": 0.0416
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 300,
+          "mean": 0.998,
+          "median": 1.0,
+          "std": 0.0199,
+          "stderr": 0.0012
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.3928,
+          "median": 0.4022,
+          "std": 0.0596,
+          "stderr": 0.0034
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 3.5,
+          "median": 4.0,
+          "std": 0.7338,
+          "stderr": 0.0424
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 3.49,
+          "median": 4.0,
+          "std": 0.7199,
+          "stderr": 0.0416
+        }
+      }
+    },
+    {
+      "condition": "no_elicitation",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.1903,
+        "median": 4.2,
+        "std": 0.3523,
+        "stderr": 0.0203
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.9433,
+        "median": 4.0,
+        "std": 0.4406,
+        "stderr": 0.0254
+      },
+      "rubric_means": {
+        "plan_quality": 3.98,
+        "tangible_result_quality": 4.4833,
+        "confidence_support": 3.6167,
+        "workflow_progress_support": 4.1467,
+        "user_burden_reduction": 3.12
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 917.8933,
+        "median": 928.5,
+        "std": 169.0182,
+        "stderr": 9.7583
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 255,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.8933,
+          "median": 3.0,
+          "std": 0.8858,
+          "stderr": 0.0511
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.99,
+          "median": 2.0,
+          "std": 0.0997,
+          "stderr": 0.0058
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.96,
+          "median": 4.0,
+          "std": 0.1963,
+          "stderr": 0.0113
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 1.0667,
+          "median": 1.0,
+          "std": 0.8821,
+          "stderr": 0.0509
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.2697,
+          "median": 0.25,
+          "std": 0.2231,
+          "stderr": 0.0129
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_recall": {
+          "count": 282,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 282,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.4865,
+          "median": 0.4917,
+          "std": 0.1802,
+          "stderr": 0.0104
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 2.9367,
+          "median": 3.0,
+          "std": 1.6335,
+          "stderr": 0.0943
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      }
+    },
+    {
+      "condition": "no_reuse",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.088,
+        "median": 4.15,
+        "std": 0.428,
+        "stderr": 0.0247
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.87,
+        "median": 4.0,
+        "std": 0.4972,
+        "stderr": 0.0287
+      },
+      "rubric_means": {
+        "plan_quality": 3.8967,
+        "tangible_result_quality": 4.2667,
+        "confidence_support": 3.5933,
+        "workflow_progress_support": 4.1533,
+        "user_burden_reduction": 3.11
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 954.7733,
+        "median": 975.5,
+        "std": 157.9911,
+        "stderr": 9.1216
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 2.33,
+        "median": 2.0,
+        "std": 1.0762,
+        "stderr": 0.0621
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 238.8067,
+        "median": 220.0,
+        "std": 160.3005,
+        "stderr": 9.255
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 297,
+        "mean": 0.5502,
+        "median": 0.6,
+        "std": 0.3084,
+        "stderr": 0.0179
+      },
+      "context_recall_proxy": {
+        "count": 258,
+        "mean": 0.93,
+        "median": 1.0,
+        "std": 0.1267,
+        "stderr": 0.0079
+      },
+      "selected_relevance_score_mean": {
+        "count": 297,
+        "mean": 0.2793,
+        "median": 0.2865,
+        "std": 0.138,
+        "stderr": 0.008
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9533,
+          "median": 7.0,
+          "std": 0.2113,
+          "stderr": 0.0122
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.25,
+          "median": 1.0,
+          "std": 0.9853,
+          "stderr": 0.0569
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.7033,
+          "median": 6.0,
+          "std": 1.006,
+          "stderr": 0.0581
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.9067,
+          "median": 3.0,
+          "std": 0.9022,
+          "stderr": 0.0521
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.9867,
+          "median": 2.0,
+          "std": 0.1149,
+          "stderr": 0.0066
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 2.33,
+          "median": 2.0,
+          "std": 1.0762,
+          "stderr": 0.0621
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9533,
+          "median": 4.0,
+          "std": 0.2113,
+          "stderr": 0.0122
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 1.0133,
+          "median": 1.0,
+          "std": 0.8958,
+          "stderr": 0.0517
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.2561,
+          "median": 0.25,
+          "std": 0.2259,
+          "stderr": 0.013
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 297,
+          "mean": 0.4484,
+          "median": 0.5,
+          "std": 0.2669,
+          "stderr": 0.0155
+        },
+        "gpt_context_recall": {
+          "count": 293,
+          "mean": 0.5551,
+          "median": 0.5,
+          "std": 0.3095,
+          "stderr": 0.0181
+        },
+        "gpt_context_f1": {
+          "count": 259,
+          "mean": 0.535,
+          "median": 0.5455,
+          "std": 0.1882,
+          "stderr": 0.0117
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 297,
+          "mean": 0.4508,
+          "median": 0.4533,
+          "std": 0.1569,
+          "stderr": 0.0091
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 293,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.2173,
+          "median": 0.2146,
+          "std": 0.0607,
+          "stderr": 0.0035
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 4.0367,
+          "median": 4.0,
+          "std": 2.0808,
+          "stderr": 0.1201
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 2.2667,
+          "median": 2.0,
+          "std": 1.6847,
+          "stderr": 0.0973
+        }
+      }
+    },
+    {
+      "condition": "no_selection",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.2067,
+        "median": 4.25,
+        "std": 0.4182,
+        "stderr": 0.0241
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.97,
+        "median": 4.0,
+        "std": 0.4724,
+        "stderr": 0.0273
+      },
+      "rubric_means": {
+        "plan_quality": 3.9867,
+        "tangible_result_quality": 4.3433,
+        "confidence_support": 3.7,
+        "workflow_progress_support": 4.3733,
+        "user_burden_reduction": 3.2033
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 1061.2367,
+        "median": 1040.0,
+        "std": 173.0907,
+        "stderr": 9.9934
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 268,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9467,
+          "median": 7.0,
+          "std": 0.2251,
+          "stderr": 0.013
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.2967,
+          "median": 1.0,
+          "std": 0.9336,
+          "stderr": 0.0539
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.65,
+          "median": 6.0,
+          "std": 0.9681,
+          "stderr": 0.0559
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.8333,
+          "median": 3.0,
+          "std": 0.9637,
+          "stderr": 0.0556
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.9867,
+          "median": 2.0,
+          "std": 0.1149,
+          "stderr": 0.0066
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9467,
+          "median": 4.0,
+          "std": 0.2251,
+          "stderr": 0.013
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 0.9833,
+          "median": 1.0,
+          "std": 0.8596,
+          "stderr": 0.0496
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.2492,
+          "median": 0.25,
+          "std": 0.2171,
+          "stderr": 0.0125
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_recall": {
+          "count": 287,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 287,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.2152,
+          "median": 0.2158,
+          "std": 0.0577,
+          "stderr": 0.0033
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 3.76,
+          "median": 4.0,
+          "std": 1.9787,
+          "stderr": 0.1142
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      }
+    },
+    {
+      "condition": "random_selection",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.1418,
+        "median": 4.15,
+        "std": 0.4181,
+        "stderr": 0.0241
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.8967,
+        "median": 4.0,
+        "std": 0.5035,
+        "stderr": 0.0291
+      },
+      "rubric_means": {
+        "plan_quality": 3.9133,
+        "tangible_result_quality": 4.1767,
+        "confidence_support": 3.61,
+        "workflow_progress_support": 4.2867,
+        "user_burden_reduction": 3.15
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 1091.68,
+        "median": 1086.5,
+        "std": 182.1796,
+        "stderr": 10.5181
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 2.5633,
+        "median": 3.0,
+        "std": 1.2017,
+        "stderr": 0.0694
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 2.5633,
+        "median": 3.0,
+        "std": 1.2017,
+        "stderr": 0.0694
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 296.67,
+        "median": 300.0,
+        "std": 195.2441,
+        "stderr": 11.2724
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 296.67,
+        "median": 300.0,
+        "std": 195.2441,
+        "stderr": 11.2724
+      },
+      "context_precision_proxy": {
+        "count": 296,
+        "mean": 0.524,
+        "median": 0.5,
+        "std": 0.3004,
+        "stderr": 0.0175
+      },
+      "context_recall_proxy": {
+        "count": 265,
+        "mean": 0.904,
+        "median": 1.0,
+        "std": 0.1801,
+        "stderr": 0.0111
+      },
+      "selected_relevance_score_mean": {
+        "count": 296,
+        "mean": 0.2688,
+        "median": 0.266,
+        "std": 0.1367,
+        "stderr": 0.0079
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 6.9767,
+          "median": 7.0,
+          "std": 0.1512,
+          "stderr": 0.0087
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 1.2033,
+          "median": 1.0,
+          "std": 0.8432,
+          "stderr": 0.0487
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 5.7733,
+          "median": 6.0,
+          "std": 0.8589,
+          "stderr": 0.0496
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 2.8733,
+          "median": 3.0,
+          "std": 0.8404,
+          "stderr": 0.0485
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.9967,
+          "median": 2.0,
+          "std": 0.0577,
+          "stderr": 0.0033
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 2.5633,
+          "median": 3.0,
+          "std": 1.2017,
+          "stderr": 0.0694
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 2.5633,
+          "median": 3.0,
+          "std": 1.2017,
+          "stderr": 0.0694
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 3.75,
+          "median": 4.0,
+          "std": 0.6549,
+          "stderr": 0.0378
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 1.59,
+          "median": 2.0,
+          "std": 1.0704,
+          "stderr": 0.0618
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 1.5967,
+          "median": 2.0,
+          "std": 1.0729,
+          "stderr": 0.0619
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 3.9767,
+          "median": 4.0,
+          "std": 0.1512,
+          "stderr": 0.0087
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 2.8767,
+          "median": 3.0,
+          "std": 0.9404,
+          "stderr": 0.0543
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.7236,
+          "median": 0.75,
+          "std": 0.2359,
+          "stderr": 0.0136
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 296,
+          "mean": 0.5572,
+          "median": 0.5714,
+          "std": 0.2697,
+          "stderr": 0.0157
+        },
+        "gpt_context_recall": {
+          "count": 295,
+          "mean": 0.5732,
+          "median": 0.5714,
+          "std": 0.2785,
+          "stderr": 0.0162
+        },
+        "gpt_context_f1": {
+          "count": 276,
+          "mean": 0.5739,
+          "median": 0.5857,
+          "std": 0.1928,
+          "stderr": 0.0116
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 296,
+          "mean": 0.516,
+          "median": 0.5309,
+          "std": 0.1587,
+          "stderr": 0.0092
+        },
+        "gpt_reused_context_precision": {
+          "count": 296,
+          "mean": 0.5572,
+          "median": 0.5714,
+          "std": 0.2697,
+          "stderr": 0.0157
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 296,
+          "mean": 0.516,
+          "median": 0.5309,
+          "std": 0.1587,
+          "stderr": 0.0092
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 2.8433,
+          "median": 3.0,
+          "std": 1.7576,
+          "stderr": 0.1015
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 295,
+          "mean": 0.5732,
+          "median": 0.5714,
+          "std": 0.2785,
+          "stderr": 0.0162
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.2455,
+          "median": 0.2369,
+          "std": 0.071,
+          "stderr": 0.0041
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 5.0433,
+          "median": 5.0,
+          "std": 2.3805,
+          "stderr": 0.1374
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 2.8433,
+          "median": 3.0,
+          "std": 1.7576,
+          "stderr": 0.1015
+        }
+      }
+    },
+    {
+      "condition": "unstructured_memory_rag",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 3.2898,
+        "median": 3.25,
+        "std": 0.3662,
+        "stderr": 0.0211
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 3.1867,
+        "median": 3.0,
+        "std": 0.431,
+        "stderr": 0.0249
+      },
+      "rubric_means": {
+        "plan_quality": 3.2067,
+        "tangible_result_quality": 3.2167,
+        "confidence_support": 2.82,
+        "workflow_progress_support": 3.3467,
+        "user_burden_reduction": 2.42
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 393.2567,
+        "median": 397.5,
+        "std": 39.9231,
+        "stderr": 2.305
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 3.36,
+        "median": 4.0,
+        "std": 1.0837,
+        "stderr": 0.0626
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 3.36,
+        "median": 4.0,
+        "std": 1.0837,
+        "stderr": 0.0626
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 31.8067,
+        "median": 38.0,
+        "std": 11.5681,
+        "stderr": 0.6679
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 31.8067,
+        "median": 38.0,
+        "std": 11.5681,
+        "stderr": 0.6679
+      },
+      "context_precision_proxy": {
+        "count": 300,
+        "mean": 0.2833,
+        "median": 0.0,
+        "std": 0.4514,
+        "stderr": 0.0261
+      },
+      "context_recall_proxy": {
+        "count": 85,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_relevance_score_mean": {
+        "count": 300,
+        "mean": 0.2068,
+        "median": 0.1062,
+        "std": 0.1635,
+        "stderr": 0.0094
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 3.36,
+          "median": 4.0,
+          "std": 1.0837,
+          "stderr": 0.0626
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 3.36,
+          "median": 4.0,
+          "std": 1.0837,
+          "stderr": 0.0626
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {
+        "gpt_context_precision": {
+          "count": 300,
+          "mean": 0.9375,
+          "median": 1.0,
+          "std": 0.1229,
+          "stderr": 0.0071
+        },
+        "gpt_context_recall": {
+          "count": 300,
+          "mean": 0.8633,
+          "median": 1.0,
+          "std": 0.2463,
+          "stderr": 0.0142
+        },
+        "gpt_context_f1": {
+          "count": 300,
+          "mean": 0.8657,
+          "median": 1.0,
+          "std": 0.1791,
+          "stderr": 0.0103
+        },
+        "gpt_selected_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.862,
+          "median": 0.8975,
+          "std": 0.1051,
+          "stderr": 0.0061
+        },
+        "gpt_reused_context_precision": {
+          "count": 300,
+          "mean": 0.9375,
+          "median": 1.0,
+          "std": 0.1229,
+          "stderr": 0.0071
+        },
+        "gpt_reused_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.862,
+          "median": 0.8975,
+          "std": 0.1051,
+          "stderr": 0.0061
+        },
+        "gpt_used_relevant_context_items": {
+          "count": 300,
+          "mean": 3.11,
+          "median": 3.5,
+          "std": 1.0464,
+          "stderr": 0.0604
+        },
+        "gpt_used_relevant_context_rate": {
+          "count": 300,
+          "mean": 0.8633,
+          "median": 1.0,
+          "std": 0.2463,
+          "stderr": 0.0142
+        },
+        "gpt_available_relevance_score_mean": {
+          "count": 300,
+          "mean": 0.4063,
+          "median": 0.4173,
+          "std": 0.0498,
+          "stderr": 0.0029
+        },
+        "gpt_available_relevant_context_items": {
+          "count": 300,
+          "mean": 3.61,
+          "median": 4.0,
+          "std": 0.6578,
+          "stderr": 0.038
+        },
+        "gpt_relevant_selected_context_items": {
+          "count": 300,
+          "mean": 3.11,
+          "median": 3.5,
+          "std": 1.0464,
+          "stderr": 0.0604
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "adapt_recursive_decomposition",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.1428,
+      "stderr_delta": 0.0269,
+      "ci95_low": 0.0901,
+      "ci95_high": 0.1955,
+      "wins": 181,
+      "ties": 22,
+      "losses": 97
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "all_context",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.115,
+      "stderr_delta": 0.0313,
+      "ci95_low": 0.0537,
+      "ci95_high": 0.1763,
+      "wins": 162,
+      "ties": 36,
+      "losses": 102
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "ask_before_plan",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.9758,
+      "stderr_delta": 0.0371,
+      "ci95_low": 0.9031,
+      "ci95_high": 1.0485,
+      "wins": 278,
+      "ties": 8,
+      "losses": 14
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "chatgpt_vanilla",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.446,
+      "stderr_delta": 0.0302,
+      "ci95_low": 0.3868,
+      "ci95_high": 0.5052,
+      "wins": 227,
+      "ties": 22,
+      "losses": 51
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "chatgpt_with_elicited_context",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.4975,
+      "stderr_delta": 0.0296,
+      "ci95_low": 0.4395,
+      "ci95_high": 0.5555,
+      "wins": 243,
+      "ties": 16,
+      "losses": 41
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "chatgpt_with_structured_summary",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.4752,
+      "stderr_delta": 0.0303,
+      "ci95_low": 0.4158,
+      "ci95_high": 0.5346,
+      "wins": 236,
+      "ties": 24,
+      "losses": 40
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "flat_decomposition",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": -0.0732,
+      "stderr_delta": 0.0288,
+      "ci95_low": -0.1296,
+      "ci95_high": -0.0168,
+      "wins": 124,
+      "ties": 29,
+      "losses": 147
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "long_context_planner",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.9543,
+      "stderr_delta": 0.0287,
+      "ci95_low": 0.898,
+      "ci95_high": 1.0106,
+      "wins": 286,
+      "ties": 8,
+      "losses": 6
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "no_elicitation",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.0063,
+      "stderr_delta": 0.0278,
+      "ci95_low": -0.0482,
+      "ci95_high": 0.0608,
+      "wins": 136,
+      "ties": 28,
+      "losses": 136
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "no_reuse",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.1087,
+      "stderr_delta": 0.0283,
+      "ci95_low": 0.0532,
+      "ci95_high": 0.1642,
+      "wins": 154,
+      "ties": 37,
+      "losses": 109
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "no_selection",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": -0.01,
+      "stderr_delta": 0.03,
+      "ci95_low": -0.0688,
+      "ci95_high": 0.0488,
+      "wins": 131,
+      "ties": 35,
+      "losses": 134
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "random_selection",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.0548,
+      "stderr_delta": 0.0317,
+      "ci95_low": -0.0073,
+      "ci95_high": 0.1169,
+      "wins": 155,
+      "ties": 26,
+      "losses": 119
+    },
+    {
+      "baseline_condition": "full_jumpstarter",
+      "comparator_condition": "unstructured_memory_rag",
+      "aggregate_only": false,
+      "matched_profile_count": 300,
+      "mean_delta": 0.9068,
+      "stderr_delta": 0.0284,
+      "ci95_low": 0.8511,
+      "ci95_high": 0.9625,
+      "wins": 286,
+      "ties": 8,
+      "losses": 6
+    }
+  ],
+  "output_json_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/score_summary.json",
+  "output_markdown_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/score_summary.md",
+  "errors": [],
+  "warnings": []
+}

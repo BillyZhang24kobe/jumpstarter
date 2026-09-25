@@ -1,0 +1,5 @@
+My user has a main purpose: {main_purpose}. My user is working on the task {task_name}: {task_description}. The current context history from the user is {context_history}. Please judge if the current context information is enough to do this task. If not, what existing most important extra information do you think they should provide as the context information for this task? Please directly generate questions for users to answer as extra info. Otherwise, output "Ready". 
+Format the response like this: 
+1. <question 1> : <reason for asking question 1> -> title of question 1
+2. <question 2> : <reason for asking question 2> -> title of question 2 
+3. <question 3> : <reason for asking question 3> -> title of question 3

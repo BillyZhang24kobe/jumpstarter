@@ -1,0 +1,86 @@
+{
+  "adapt_recursive_decomposition": {
+    "workflow_prompt_tokens_ci95_high": 0.0,
+    "workflow_prompt_tokens_ci95_low": 0.0,
+    "workflow_prompt_tokens_mean": 0.0,
+    "workflow_prompt_tokens_stderr": 0.0
+  },
+  "all_context": {
+    "workflow_prompt_tokens_ci95_high": 27461.940882807976,
+    "workflow_prompt_tokens_ci95_low": 26448.40578385869,
+    "workflow_prompt_tokens_mean": 26955.173333333332,
+    "workflow_prompt_tokens_stderr": 258.5548721809403
+  },
+  "ask_before_plan": {
+    "workflow_prompt_tokens_ci95_high": 1072.5680708092834,
+    "workflow_prompt_tokens_ci95_low": 990.638595857383,
+    "workflow_prompt_tokens_mean": 1031.6033333333332,
+    "workflow_prompt_tokens_stderr": 20.900376263239902
+  },
+  "chatgpt_vanilla": {
+    "workflow_prompt_tokens_ci95_high": 44.657067927447336,
+    "workflow_prompt_tokens_ci95_low": 43.74293207255267,
+    "workflow_prompt_tokens_mean": 44.2,
+    "workflow_prompt_tokens_stderr": 0.23319792216700805
+  },
+  "chatgpt_with_elicited_context": {
+    "workflow_prompt_tokens_ci95_high": 2017.9083230029112,
+    "workflow_prompt_tokens_ci95_low": 2009.8583436637557,
+    "workflow_prompt_tokens_mean": 2013.8833333333334,
+    "workflow_prompt_tokens_stderr": 2.053566157947862
+  },
+  "chatgpt_with_structured_summary": {
+    "workflow_prompt_tokens_ci95_high": 1936.298279992322,
+    "workflow_prompt_tokens_ci95_low": 1928.1083866743447,
+    "workflow_prompt_tokens_mean": 1932.2033333333334,
+    "workflow_prompt_tokens_stderr": 2.0892584994840373
+  },
+  "flat_decomposition": {
+    "workflow_prompt_tokens_ci95_high": 19496.812119199938,
+    "workflow_prompt_tokens_ci95_low": 18819.42788080006,
+    "workflow_prompt_tokens_mean": 19158.12,
+    "workflow_prompt_tokens_stderr": 172.80210163262217
+  },
+  "full_jumpstarter": {
+    "workflow_prompt_tokens_ci95_high": 24759.713716296123,
+    "workflow_prompt_tokens_ci95_low": 23931.03961703721,
+    "workflow_prompt_tokens_mean": 24345.376666666667,
+    "workflow_prompt_tokens_stderr": 211.3964538925794
+  },
+  "long_context_planner": {
+    "workflow_prompt_tokens_ci95_high": 554.0490630429781,
+    "workflow_prompt_tokens_ci95_low": 547.0376036236885,
+    "workflow_prompt_tokens_mean": 550.5433333333333,
+    "workflow_prompt_tokens_stderr": 1.7886376069616585
+  },
+  "no_elicitation": {
+    "workflow_prompt_tokens_ci95_high": 11940.553779630927,
+    "workflow_prompt_tokens_ci95_low": 11506.639553702405,
+    "workflow_prompt_tokens_mean": 11723.596666666666,
+    "workflow_prompt_tokens_stderr": 110.69240457360267
+  },
+  "no_reuse": {
+    "workflow_prompt_tokens_ci95_high": 20073.36773946539,
+    "workflow_prompt_tokens_ci95_low": 19486.332260534607,
+    "workflow_prompt_tokens_mean": 19779.85,
+    "workflow_prompt_tokens_stderr": 149.75394870683283
+  },
+  "no_selection": {
+    "workflow_prompt_tokens_ci95_high": 20686.50250604965,
+    "workflow_prompt_tokens_ci95_low": 20058.704160617017,
+    "workflow_prompt_tokens_mean": 20372.603333333333,
+    "workflow_prompt_tokens_stderr": 160.15263914097744
+  },
+  "random_selection": {
+    "workflow_prompt_tokens_ci95_high": 24522.659137671053,
+    "workflow_prompt_tokens_ci95_low": 23768.354195662283,
+    "workflow_prompt_tokens_mean": 24145.506666666668,
+    "workflow_prompt_tokens_stderr": 192.42473010427793
+  },
+  "unstructured_memory_rag": {
+    "workflow_prompt_tokens_ci95_high": 518.227076071338,
+    "workflow_prompt_tokens_ci95_low": 504.472923928662,
+    "workflow_prompt_tokens_mean": 511.35,
+    "workflow_prompt_tokens_stderr": 3.5087122812949074
+  }
+}

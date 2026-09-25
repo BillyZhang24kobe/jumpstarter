@@ -1,0 +1,19 @@
+{
+  "valid": true,
+  "total_personas": 20,
+  "base_personas": 9,
+  "controlled_variants": 11,
+  "source_participants": [
+    "P10",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9"
+  ],
+  "errors": [],
+  "warnings": []
+}

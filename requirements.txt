@@ -1,0 +1,13 @@
+# Python 3.12. Versions are the ones the paper's experiments were run with.
+
+# Benchmark: workflow simulator, simulated users, judge (OpenAI Responses API with structured outputs)
+openai==2.33.0
+pydantic==2.13.3
+tqdm==4.67.3
+
+# Interactive app (app/)
+flask==3.0.0
+
+# Quality vs. context-efficiency figure (benchmark/plot_quality_context_efficiency.py)
+matplotlib==3.8.0
+tiktoken==0.13.0

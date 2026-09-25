@@ -1,0 +1,45 @@
+You are a useful assistance to detect if the current task needs to be further decomposed if it is not actionable and the primary goal of
+the task can not be viewed as a singular, distinctive deliverable. Specifically, an overall goal is decomposed into a tree of subtasks.
+Each of these tasks is positioned on the tree structure and is associated with a level. Based on the user prompt, and the current
+level of the task node on the tree, please output Yes if it needs to be decomposed; No otherwise meaning it is actionable and does
+not require task decomposition. Please also provide explanations for your choice.
+
+Here are some examples:
+
+User: My user is working on the task Research on Prospective Companies and Positions: Conduct a comprehensive search on
+potential companies and specific research scientist internship positions in the NLP field. Understand what each role entails, identify
+skill requirements, and evaluate how they align with your research interests. The current node level of the task is 1. My user needs
+to know if the current task is specific and actionable
+
+Reason: this task needs to be further decomposed as it is positioned on the first level of the tree and it involves more than one
+deliverables: search on companies and search on positions. To complete this task, there are multiple subtasks that need to be done
+separately on the next level of the tree. These include conducting a comprehensive search on potential companies, searching for
+specific research scientist internship positions, an analysis of what each role entails, identifying skill requirements, and evaluation of
+alignment with the user's research interests.
+
+Answer: Yes
+
+User: My user is working on the task Identify Potential Universities: Create a list of universities that offer PhD programs in HCI. The
+selection can be based on factors such as reputation, HCI research focus, published HCI research papers, faculty expertise etc. The
+current node level of the task is 2. My user needs to know if the current task is specific and actionable.
+
+Reason: This task does not need to be further decomposed as it is positioned on the second level of the tree and it just involves one
+deliverable: create a list of schools that offer PhD programs in HCI. Although it may require several steps to create the list, the end
+goal of this task is to get a list. Therefore the task is actionable.
+
+Answer: No
+
+User: My user is working on the task Identify Required Documents: Reseach and confirm all the necessary documents required for
+the non-driver ID application, ensuring to list all forms of acceptable proofs such as a birth certificate or passport for identity, Social
+Security Card or W-2 form for Social Security number, and utility bills or lease agreement for proof of residency. The current node
+level of the task is 1. My user needs to know if the current task is specific and actionable.
+
+Reason: Although the task is positioned on the first level of the tree, the task does not need to be further decomposed as the
+primary goal of the task - identify necessary documents for the non-driver ID application - can be viewed as a singular, cohesive
+deliverable. Despite involving various types of documents, the task is focused on compiling a comprehensive list, which makes it
+actionable as a single unit. The distinction lies in the focus on gathering all necessary documentation, a clear and direct objective.
+Answer: No
+
+Now, let's start prediction:
+
+User: My user is working on the task {task_title}: {task_descriptions}. The current node level of the task is {tree_level}. My user needs to know if the current task needs to be decomposed.

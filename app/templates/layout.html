@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+<!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>JumpStarter</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">JumpStarter</a>
+    <button class="sd-button" id="saveTaskButton" title="Click to save the current task">Save</button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="context-header" id="context-header-fork">
+            <p>We detect that this task should be decomposed with forking and we suggest using the following context to do the forking. You can also select your own.</p>
+            <i class="fa-solid fa-caret-down" onclick="showCurrAnswerNames('dropdown-content-answerNames-fork')"></i>
+            <div class="dropdown-content" id="dropdown-content-answerNames-fork" title="Click to see existing variables">
+            </div>
+          </div>
+          <textarea type="text" id="context-input-fork" placeholder="Type to get started..." rows="1" cols="100"></textarea>
+          <!-- <input type="text" id="nameInput"> -->
+          <button class="sd-button" onclick="get_fork_steps()">Accept</button>
+          <button class="sd-button-second" onclick="get_steps()">Decline and proceed to breakdown</button>
+      </div>
+    </div>
+
+    <div id="myModal-breakdown" class="modal">
+        <div class="modal-content">
+            <span class="close" id="myModal-brkdwn-close">&times;</span>
+            <div class="context-header" id="context-header-breakdown">
+              <p>We detect that this task should be decomposed with break down and we suggest using the following context to do the break down. You can also select your own.</p>
+              <i class="fa-solid fa-caret-down" onclick="showCurrAnswerNames('dropdown-content-answerNames-breakdown')"></i>
+              <div class="dropdown-content" id="dropdown-content-answerNames-breakdown" title="Click to see existing variables">
+              </div>
+            </div>
+            <textarea type="text" id="context-input-breakdown" placeholder="Type to get started..." rows="1" cols="100"></textarea>
+            <button onclick="get_steps()">Breakdown with this context</button>
+            <!-- <button onclick="get_steps()">Decline and proceed to breakdown</button> -->
+        </div>
+    </div>
+
+    <div id="myModal-context-curation-draft" class="modal">
+        <div class="modal-content">
+            <span class="close" id="myModal-ccd-close">&times;</span>
+            <div class="context-header" id="context-header-ccd">
+                <h5>To do the task, we suggest you using the following context info. You can de-select them or select your own.</h5>
+            </div>
+            <div id="checkboxList-ccd"></div>
+            <div class="context-header" id="context-input-ccd-container">
+                <h6>Select your own context from the dropdown: </h6>
+                <i class="fa-solid fa-caret-down" onclick="showCurrAnswerNames('dropdown-content-answerNames-ccd')"></i>
+                <div class="dropdown-content" id="dropdown-content-answerNames-ccd" title="Click to see existing variables"></div>
+            </div>
+            <div class="context-select-input">
+                <textarea type="text" id="context-input-ccd" placeholder="Select relevant information from the dropdown ..." rows="1" cols="100"></textarea>
+            </div>
+            <button class="sd-button" onclick="get_gpt_response()">Generate</button>
+            <!-- <button onclick="get_steps()">Decline and proceed to breakdown</button> -->
+        </div>
+    </div>
+
+    <div id="myModal-context-elicitation-draft" class="modal">
+        <div class="modal-content">
+            <span class="close" id="myModal-ced-close">&times;</span>
+            <div id="context-eli-header">
+                <div id="ced-header">
+                    <!-- <h5>To get you a better draft, we suggest you providing the following extra info. You can skip them or add your own info.</h5> -->
+                </div>
+                <div class="global-form-group" id="globalFormGroup-ced">
+                    <!-- <div class="form-group">
+                        <label for="customName">Add your own</label>
+                    </div> -->
+                    <div class="elicit-draft">
+                        <h6>Add your own context</h6>
+                        <div class="form-group">
+                            <input type="text" id="customName" name="customName" placeholder="Context name. E.g. Travel Duration" style="margin-right: 45px">
+                            <input type="text" id="customContent" name="customContent" placeholder="Context content. E.g. One week."> <span style="margin:5px"> OR </span> 
+                            <input type="file" id="customFile" name="customFile">
+                        </div>
+                    </div>
+                    <button class="sd-button" onclick="regenerate(0, 'brainstorm')">Regenerate a new draft</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div id="spinner-div" class="pt-5">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+  </div>
+
+  <div class="purpose-container">
+    <!-- <p>Please tell me your main goal: </p> -->
+    <div class="scrollable-div" id="left-section">
+        <div class="tree" id="treeContainer">
+            <div class="tree-container">
+                <h5>Task Breakdown</h5>
+                <ul id="treeContainer-ul">
+                    <!-- <li class="tree-node" id="level-1-0-0">
+                        <span class="node" id="purpose">apply for a PhD in NLP by 12/15/24</span>
+                        <ul class="active" id="active-level-1-0-0">
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="answer-draft-box" id="ss-1">
+            <div class="answer-draft-container">
+                <label for="draft-name" hidden>Name: (Please give a name to your answer)</label>
+                <input type="text" id="draft-name" name="draft-name" hidden>
+                <h5>Working Solution Draft</h5>
+                <textarea type="text" id="answer-draft" placeholder="Write down your own answer here ..." rows="3" cols="100"></textarea><br>
+                <input type="submit" id="complete_answer" value="Submit" onclick="complete_answer_draft()">
+                <div id="feedbackMessage" style="display:none; color: green; margin-top: 10px;">
+                    Completion Successful!
+                </div>
+                <button type="button" style="display:none; cursor: pointer; margin-top: 10px; background-color: #00b7ff; color: white; cursor: pointer; border: none;" id="re-edit-btn" onclick="re_edit()">Edit</button>
+                </div>
+            <div class="file-upload-container" hidden>
+                <h5>Upload files</h5>
+                    <div>
+                        <input type="file" name="fileupload" id="fileupload" onchange="updateFilename()">
+                    </div>
+                    <div class="upload-files" id="upload-files">
+                        <div style="margin-right:10px;">
+                            <label for="upload_filename">Filename:</label>
+                            <input type="text" id="upload_filename" name="upload_filename">
+                            </div>
+                            <div>
+                            <label for="filedescription">File Description:</label>
+                            <input type="text" id="filedescription" name="filedescription">
+                        </div>
+                    </div>
+                    <!-- <div style="margin-top:10px;">
+                        <input type="submit" id="upload-files-user" value="Upload" onclick="upload_files()">
+                    </div> -->
+                    <!-- <div id="feedbackMessage-upload" style="display:none; color: green; margin-top: 10px;">
+                        Upload Successful!
+                    </div> -->
+                <!-- </form> -->
+            </div>
+        </div>
+        <!-- <div class="search-section box" id="ss-2">
+            <div class="file-upload-container">
+                <p>Upload files</p>
+                    <div class="upload-files" id="upload-files">
+                        <div style="margin-right:10px;">
+                            <label for="upload_filename">Filename:</label><br>
+                            <input type="text" id="upload_filename" name="upload_filename">
+                            </div>
+                            <div>
+                            <label for="filedescription">File Description:</label><br>
+                            <input type="text" id="filedescription" name="filedescription">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="file" name="fileupload" id="fileupload" onchange="updateFilename()">
+                    </div>
+                    <div style="margin-top:10px;">
+                        <input type="submit" id="upload-files-user" value="Upload" onclick="upload_files()">
+                    </div>
+                    <div id="feedbackMessage-upload" style="display:none; color: green; margin-top: 10px;">
+                        Upload Successful!
+                    </div>
+            </div>
+        </div> -->
+        <!-- <div class="chat-container">
+            <div class="chat-header">
+                JourneyLLM Chatbot
+            </div>
+    
+            <div class="chat-messages" id="chat-messages">
+            </div>
+            <div class="chat-input">
+               
+                <form id="uploadForm" enctype="multipart/form-data"></form>
+                    <div class="input-row">
+                        <textarea id="message-input" placeholder="Type a message..."></textarea>
+                        <button type="submit" id="send-message">Send</button>
+                    </div>
+                    <div class="input-row">
+                        <input type="file" id="image-input" name="image" accept="image/*">
+                    </div>
+                </form>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="scrollable-div" id="right-section">
+        <div class="description-container" id="desc-c">
+            <div class="description" id="desc"></div>
+            <!-- <div class="progress-checker" id="progress"></div> -->
+            <!-- <br>
+            <div id="stepsButtonContainer" class="hidden">
+                <button id="getStepsButton" onclick="get_steps()">Break it down!</button>
+            </div> -->
+        </div>
+
+        <div class="description-container" id="subtask-detection-container" style="display:none;">
+            <p>We detect that this task should be further decomposed (fork or break down). </p>
+            <div class="sd-buttons">
+                <div class="sd-button" onclick="expandSteps(`${currNode.id}`)">Decompose the task</div>
+                <div class="sd-button-second" onclick="context_curation_draft()">Directly start drafting</div>
+            </div>
+        </div>
+
+        <div class="description-container-sec" id="context-window" style="display:none;">
+            <!-- <p>System Prompt</p> -->
+            <!-- <textarea type="text" id="system-prompt" rows="2" cols="100" style="font-family: Courier;" hidden></textarea><br> -->
+            <!-- <h5>Action Pallete</h5> -->
+            <div class="context-header" id="context-header" hidden>
+                <h6>Relevant Information</h6>
+                <!-- <i class="fa-solid fa-caret-down" onclick="showCurrAnswerNames('dropdown-content-answerNames')"></i>
+                <div class="dropdown-content" id="dropdown-content-answerNames" title="Click to see existing variables">
+                </div> -->
+                <div class="dropdown-content" id="dropdown-content-answerNames" title="Click to see existing variables" hidden></div>
+            </div>
+            <textarea type="text" id="context-input" placeholder="Type to get started..." rows="1" cols="100" hidden></textarea>
+            <!-- <p>Prompt</p> -->
+            <textarea type="text" id="prompt" rows="5" cols="100" style="font-family: Courier;" hidden></textarea>
+            <div id="startButtonContainer" class="hidden">
+                <p>We detect that this task is actionable and you can start drafting. </p>
+                <div class="sd-buttons">
+                    <div class="sd-button-second" onclick="expandSteps(`${currNode.id}`)">Decompose the task</div>
+                    <div class="sd-button" onclick="context_curation_draft()">Start drafting</div>
+                </div>
+                <!-- <button class="sd-button" id="getStartedButton" onclick="context_curation_draft()">Generate</button> -->
+            </div>
+            <div id="regenButtonContainer" class="hidden">
+                <button class="sd-button" id="regenButton" onclick="regenerate(0, 'brainstorm', true)">Regenerate</button>
+                <button class="sd-button" id="addContextButton" onclick="context_elicitation_draft()">Add context and regenerate</button>
+            </div>
+
+            <div id="brainstorm_section">
+                <div class="brainstorm" id="brainstorm"></div>
+                <div class="result-box" id="brainstorm_output"></div>
+            </div>
+        </div>
+
+        <!-- <div class="description-container-sec" id="brainstorm_section">
+            <div class="brainstorm" id="brainstorm"></div>
+            <div class="result-box" id="brainstorm_output"></div>
+        </div> -->
+    </div>
+
+  </div>
+
+  <script src="{{url_for('static', filename='tree.js')}}"></script>
+  <script src="{{url_for('static', filename='task.js')}}"></script>
+  <!-- <script src="{{url_for('static', filename='chatbot.js')}}"></script>   -->
+  <!-- Render the task input here -->
+  <script type="text/javascript">
+    // Declare a global variable that your external JS file can access
+    var taskInput = `{{ task_input | tojson | safe }}`;
+    var filenames = `{{ filenames | tojson | safe }}`;  // list of filenames
+    var rootNode = `{{ root_node | tojson }}`;
+    var username = `{{ username | tojson }}`;
+    var userGlobalContext = `{{ userGlobalContext | tojson }}`;
+    var user_context = `{{ user_context | tojson }}`;
+    // strip quotes from the string: Apply for a PhD in HCI by 12/24/2024
+    taskInput = taskInput.replace(/['"]+/g, '');
+    // console.log('filenames:', filenames);
+    // filename  = filename.replace(/['"]+/g, '');
+    username = username.replace(/['"]+/g, '');
+    // rootNode = rootNode.replace(/['"]+/g, '');
+    // var taskInput_deadline = taskInput.split('by')[1].trim();
+    var taskInput_deadline = "";
+    var accept_steps = true;
+    console.log('taskInput:', taskInput);
+    console.log('filenames:', filenames);
+    console.log('rootNode:', rootNode);
+    console.log('username:', username);
+    console.log('userGlobalContext:', userGlobalContext);
+    
+    // Initialize the tree if rootNode is empty
+    if (rootNode === "null") {
+        console.log('rootNode is empty');
+        initTree();
+    } else {
+        console.log('rootNode is not empty');
+        // replace '\n' with '' and parse the string to JSON
+        rootNode = rootNode.replace(/(?:\r\n|\r|\n)/g, '');
+        rootNode = JSON.parse(rootNode);
+        // Load the tree from the backend
+        loadTree(rootNode);
+    }
+
+    // parse usercontext to JSON
+    userGlobalContext = userGlobalContext.replace(/[\u0000-\u001F\u007F]/g, '').replace(/\n/g, '\\n');
+    user_context = user_context.replace(/[\u0000-\u001F\u007F]/g, '').replace(/\n/g, '\\n');
+    userGlobalContext = JSON.parse(userGlobalContext);
+    user_context = JSON.parse(user_context);
+
+    // Add userContext keys to all dropdown-content divs
+    // var dropdown_content_fork = document.getElementById('dropdown-content-answerNames-fork');
+    var dropdown_content_breakdown = document.getElementById('dropdown-content-answerNames-breakdown');
+    // var dropdown_content_ccd = document.getElementById('dropdown-content-answerNames-ccd');
+    for (var key in userGlobalContext) {
+        var newDropDownitem = document.createElement('div');
+        newDropDownitem.className = 'dropdown-content-items';
+        newDropDownitem.innerHTML = `<a onclick="showContextKeys('` + `${key}` + `')" title="${userGlobalContext[key]}">${key}</a>`;
+
+        // dropdown_content_fork.appendChild(newDropDownitem);
+        dropdown_content_breakdown.appendChild(newDropDownitem);
+        // dropdown_content_ccd.appendChild(newDropDownitem.cloneNode(true));
+    }
+
+    // save the task to the backend database
+    document.getElementById("saveTaskButton").addEventListener("click", function() {
+      const rootNode = nodeMap['level-0-1-0-0'];
+      let jsonData = {task: taskInput, filenames: filenames, root_node: rootNode, username: username, userGlobalContext: userGlobalContext, user_context: user_context};
+      console.log('jsonData for save_task:', jsonData);
+      $.ajax({
+        type: "POST",
+        url: "/save_task",
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(jsonData),
+        success: function(response) {
+          console.log('response:', response);
+          alert('Task saved successfully!');
+        },
+        error: function(error) {
+          console.log('error:', error);
+          alert('Error saving task!');
+        }
+      });
+    });
+
+    var dc_answerNames = document.getElementById("dropdown-content-answerNames");
+    var modal = document.getElementById("myModal");
+    var modal_breakdown = document.getElementById("myModal-breakdown");
+    // var modal_btn = document.getElementById("myBtn");
+    var modal_span = document.getElementsByClassName("close")[0];
+    var modal_breakdown_span = document.getElementById("myModal-brkdwn-close");
+
+    modal_span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    modal_breakdown_span.onclick = function() {
+        modal_breakdown.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        if (event.target == dc_answerNames) {
+        dc_answerNames.style.display = "none";
+        }
+        if (event.target == modal_breakdown) {
+        modal_breakdown.style.display = "none";
+        }
+    }
+    </script>
+
+    <div class="container-fluid">   
+        {% block content %}
+        {% endblock %}
+    </div>  
+  </body>
+</html>
+
+
+
+

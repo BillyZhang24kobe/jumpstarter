@@ -1,0 +1,192 @@
+{
+  "valid": true,
+  "run_dir": "experiments/benchmark/runs/single_turn_decomposition_test300",
+  "baseline_condition": "single_turn_decomposition",
+  "score_count": 300,
+  "condition_count": 1,
+  "conditions": [
+    "single_turn_decomposition"
+  ],
+  "condition_summaries": [
+    {
+      "condition": "single_turn_decomposition",
+      "count": 300,
+      "study_quality_score": {
+        "count": 300,
+        "mean": 4.0503,
+        "median": 4.05,
+        "std": 0.4074,
+        "stderr": 0.0235
+      },
+      "overall_score": {
+        "count": 300,
+        "mean": 4.0933,
+        "median": 4.0,
+        "std": 0.5087,
+        "stderr": 0.0294
+      },
+      "rubric_means": {
+        "plan_quality": 4.2067,
+        "tangible_result_quality": 4.4,
+        "confidence_support": 3.8067,
+        "workflow_progress_support": 4.1467,
+        "user_burden_reduction": 3.34
+      },
+      "output_words": {
+        "count": 300,
+        "mean": 357.4233,
+        "median": 356.0,
+        "std": 69.6108,
+        "stderr": 4.019
+      },
+      "selected_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_item_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "selected_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "reused_context_token_count": {
+        "count": 300,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "stderr": 0.0
+      },
+      "context_precision_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "context_recall_proxy": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "selected_relevance_score_mean": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "stderr": null
+      },
+      "component_trace_metrics": {
+        "elicited_context_items": {
+          "count": 300,
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "substantive_elicited_context_items": {
+          "count": 300,
+          "mean": 0.99,
+          "median": 1.0,
+          "std": 0.5455,
+          "stderr": 0.0315
+        },
+        "unknown_context_answer_events": {
+          "count": 300,
+          "mean": 2.01,
+          "median": 2.0,
+          "std": 0.5455,
+          "stderr": 0.0315
+        },
+        "hierarchical_decomposition_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "max_node_depth": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "selected_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_context_items_trace": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "context_reuse_with_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "draft_context_reuse_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "reused_draft_context_items": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "saved_draft_context_events": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_count": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        },
+        "completed_node_ratio": {
+          "count": 300,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "stderr": 0.0
+        }
+      },
+      "gpt_context_relevance_metrics": {}
+    }
+  ],
+  "comparisons": [],
+  "output_json_path": "experiments/benchmark/runs/single_turn_decomposition_test300/score_summary.json",
+  "output_markdown_path": "experiments/benchmark/runs/single_turn_decomposition_test300/score_summary.md",
+  "errors": [],
+  "warnings": []
+}

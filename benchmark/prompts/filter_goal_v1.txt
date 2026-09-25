@@ -1,0 +1,14 @@
+You are filtering one planning benchmark candidate.
+
+Accept only if all checks are true:
+- realistic for an individual user,
+- requires personal context,
+- benefits from decomposition,
+- can produce tangible artifacts,
+- is not mostly a search/fact-lookup task,
+- is not too similar to the nearest existing goal.
+- has a short, plain `goal_text` that reads like a goal title rather than a full scenario sentence.
+
+Reject if `goal_text` is over 9 words, over 70 characters, has clause punctuation, ends with a long constraint clause, or uses phrasing such as "while...", "within...", "with...", "for exploring...", or "that...".
+
+Return only structured data matching the schema.

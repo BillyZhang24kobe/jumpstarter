@@ -1,0 +1,1365 @@
+[
+  {
+    "persona_id": "P2_base",
+    "persona_type": "base",
+    "source_participant": "P2",
+    "source_anchor_id": "P2",
+    "goal": "Organize a weekly PhD game night",
+    "user_description": "A novice user working on: Organize a weekly PhD game night. Known context: Never organized game night before; But have a strong idea of how to do it; Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday. Important constraints: Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games; Never organized game night before. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "events_coordination"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "opinionated",
+    "communication_style": "balanced",
+    "task_objectives": [
+      "coordinate people, time, and location constraints",
+      "create a feasible event plan",
+      "draft communication or logistics artifacts"
+    ],
+    "known_facts": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it",
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Size of the Participant Group: We expect between 5-9 PhD students at game night",
+      "University name: Cedarwick Hollow University"
+    ],
+    "preferences": [
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games"
+    ],
+    "gaps_in_self_knowledge": [
+      "may not know the standard process for this goal"
+    ],
+    "constraints_to_remember": [
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Never organized game night before"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one to three concise sentences.",
+      "Provide specifics when asked, but do not front-load every detail.",
+      "Use a collaborative tone."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Organize a weekly PhD game night",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as itinerary, invitation draft, logistics checklist"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it",
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Size of the Participant Group: We expect between 5-9 PhD students at game night",
+      "University name: Cedarwick Hollow University"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P3_base",
+    "persona_type": "base",
+    "source_participant": "P3",
+    "source_anchor_id": "P3",
+    "goal": "Land a job offer",
+    "user_description": "An intermediate user working on: Land a job offer. Known context: In the process of researching companies; Job Search Location: new york, new york; Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask. Important constraints: Job Search Location: new york, new york; Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL...",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify target opportunities",
+      "organize application or outreach materials",
+      "produce concrete next actions and tracking artifacts"
+    ],
+    "known_facts": [
+      "In the process of researching companies",
+      "Job Search Location: new york, new york",
+      "Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask",
+      "Target Industry or Job Type: software engineering job"
+    ],
+    "preferences": [
+      "Job Search Location: new york, new york",
+      "Target Industry or Job Type: software engineering job"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Job Search Location: new york, new york",
+      "Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask",
+      "Target Industry or Job Type: software engineering job",
+      "In the process of researching companies"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Land a job offer",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as application tracker, outreach drafts, interview prep plan"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if advice ignores target role, location, or existing background"
+    ],
+    "evidence_quotes": [
+      "In the process of researching companies",
+      "Job Search Location: new york, new york",
+      "Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask",
+      "Target Industry or Job Type: software engineering job"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P4_base",
+    "persona_type": "base",
+    "source_participant": "P4",
+    "source_anchor_id": "P4",
+    "goal": "Prepare for the LSAT",
+    "user_description": "A novice user working on: Prepare for the LSAT. Known context: Know it will take lots of time and effort to prepare; Current Preparation Level: none; LSAT Exam Date: 2 years from now. Important constraints: Know it will take lots of time and effort to prepare; LSAT Exam Date: 2 years from now. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "choose a realistic preparation timeline",
+      "identify missing baseline information",
+      "turn study preparation into weekly actions"
+    ],
+    "known_facts": [
+      "Know it will take lots of time and effort to prepare",
+      "Current Preparation Level: none",
+      "LSAT Exam Date: 2 years from now"
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Know it will take lots of time and effort to prepare",
+      "LSAT Exam Date: 2 years from now"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Prepare for the LSAT",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as study schedule, resource checklist, progress tracker"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if the study timeline ignores the exam date or current preparation level"
+    ],
+    "evidence_quotes": [
+      "Know it will take lots of time and effort to prepare",
+      "Current Preparation Level: none",
+      "LSAT Exam Date: 2 years from now"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P5_base",
+    "persona_type": "base",
+    "source_participant": "P5",
+    "source_anchor_id": "P5",
+    "goal": "Run social media to attract followers",
+    "user_description": "An intermediate user working on: Run social media to attract followers. Known context: Already had 900+ followers; Academic Schedule and Commitments: Work 90 hours a week; Current Social Media Status: 900 followers. Important constraints: Academic Schedule and Commitments: Work 90 hours a week; **Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "creative_personal"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify audience and positioning",
+      "break the creative project into launch tasks",
+      "produce reusable planning artifacts"
+    ],
+    "known_facts": [
+      "Already had 900+ followers",
+      "Academic Schedule and Commitments: Work 90 hours a week",
+      "Current Social Media Status: 900 followers",
+      "Goals and Audience: PhD students at other US universities and other Chinese people in US",
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic"
+    ],
+    "preferences": [
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Academic Schedule and Commitments: Work 90 hours a week",
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic",
+      "Already had 900+ followers"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Run social media to attract followers",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as content plan, launch checklist, audience notes"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Already had 900+ followers",
+      "Academic Schedule and Commitments: Work 90 hours a week",
+      "Current Social Media Status: 900 followers",
+      "Goals and Audience: PhD students at other US universities and other Chinese people in US",
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P6_base",
+    "persona_type": "base",
+    "source_participant": "P6",
+    "source_anchor_id": "P6",
+    "goal": "Sublease a Manhattan apartment and move to Queens",
+    "user_description": "An intermediate user working on: Sublease a Manhattan apartment and move to Queens. Known context: Moved lots of times before - not sure about the sublease process; Note: the system suggests uploading lease agreement - but too long to upload.; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.. Important constraints: Moved lots of times before - not sure about the sublease process; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars. They need a planning assistan...",
+    "goal_domain_preferences": [
+      "everyday_admin_home"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "organize deadlines and logistics",
+      "track documents, messages, and decisions",
+      "produce a practical moving or admin checklist"
+    ],
+    "known_facts": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload.",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "preferences": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars."
+    ],
+    "gaps_in_self_knowledge": [
+      "has unresolved preferences or constraints"
+    ],
+    "constraints_to_remember": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Sublease a Manhattan apartment and move to Queens",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as moving checklist, message templates, timeline"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload.",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P7_base",
+    "persona_type": "base",
+    "source_participant": "P7",
+    "source_anchor_id": "P7",
+    "goal": "Create a portfolio website for job applications",
+    "user_description": "An intermediate user working on: Create a portfolio website for job applications. Known context: I know I need template websites / HTML CSS; I know on the website I will show papers and projects, about me\u2026.. Important constraints: I know I need template websites / HTML CSS. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "low",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify target opportunities",
+      "organize application or outreach materials",
+      "produce concrete next actions and tracking artifacts"
+    ],
+    "known_facts": [
+      "I know I need template websites / HTML CSS",
+      "I know on the website I will show papers and projects, about me\u2026."
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need elicitation before concrete planning"
+    ],
+    "constraints_to_remember": [
+      "I know I need template websites / HTML CSS"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Create a portfolio website for job applications",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as application tracker, outreach drafts, interview prep plan"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if advice ignores target role, location, or existing background"
+    ],
+    "evidence_quotes": [
+      "I know I need template websites / HTML CSS",
+      "I know on the website I will show papers and projects, about me\u2026."
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": [
+      "Log record has no user_context entries"
+    ]
+  },
+  {
+    "persona_id": "P8_base",
+    "persona_type": "base",
+    "source_participant": "P8",
+    "source_anchor_id": "P8",
+    "goal": "Prepare to deliver a first tutorial",
+    "user_description": "A novice user working on: Prepare to deliver a first tutorial. Known context: Never taught a class before; Know basic logistics; Educational Level of the Audience: Undergraduate freshman. Important constraints: Level: first time; Never taught a class before. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "high",
+    "decision_style": "opinionated",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify the user's current state",
+      "identify missing constraints",
+      "produce concrete planning artifacts"
+    ],
+    "known_facts": [
+      "Never taught a class before",
+      "Know basic logistics",
+      "Educational Level of the Audience: Undergraduate freshman",
+      "Format of the Tutorial: Presentation, questions and answers",
+      "Level: first time",
+      "Subject or Topic of the Tutorial: AI in Business"
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may not know the standard process for this goal"
+    ],
+    "constraints_to_remember": [
+      "Level: first time",
+      "Never taught a class before"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "When asked directly, provide concrete constraints from known_facts and constraints_to_remember."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Prepare to deliver a first tutorial",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as checklist, timeline, decision aid"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Never taught a class before",
+      "Know basic logistics",
+      "Educational Level of the Audience: Undergraduate freshman",
+      "Format of the Tutorial: Presentation, questions and answers",
+      "Level: first time",
+      "Subject or Topic of the Tutorial: AI in Business"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P9_base",
+    "persona_type": "base",
+    "source_participant": "P9",
+    "source_anchor_id": "P9",
+    "goal": "Start a personal YouTube channel",
+    "user_description": "A novice user working on: Start a personal YouTube channel. Known context: Have other social media accounts - but rarely post videos on them; Doesn\u2019t have a YouTube account yet; Channel Goals: create community for discussion, gain followers. Important constraints: Target Audience: i need help identifying them; Have other social media accounts - but rarely post videos on them. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "creative_personal"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify audience and positioning",
+      "break the creative project into launch tasks",
+      "produce reusable planning artifacts"
+    ],
+    "known_facts": [
+      "Have other social media accounts - but rarely post videos on them",
+      "Doesn\u2019t have a YouTube account yet",
+      "Channel Goals: create community for discussion, gain followers",
+      "Target Audience: i need help identifying them",
+      "Video Creation Proficiency: pretty familiar",
+      "upload frequency: bi weekly"
+    ],
+    "preferences": [
+      "Target Audience: i need help identifying them"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Target Audience: i need help identifying them",
+      "Have other social media accounts - but rarely post videos on them"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Start a personal YouTube channel",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as content plan, launch checklist, audience notes"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Have other social media accounts - but rarely post videos on them",
+      "Doesn\u2019t have a YouTube account yet",
+      "Channel Goals: create community for discussion, gain followers",
+      "Target Audience: i need help identifying them",
+      "Video Creation Proficiency: pretty familiar",
+      "upload frequency: bi weekly"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P10_base",
+    "persona_type": "base",
+    "source_participant": "P10",
+    "source_anchor_id": "P10",
+    "goal": "Organize a family reunion",
+    "user_description": "A novice user working on: Organize a family reunion. Known context: Rarely did organization work before, but feel know the basic logic; Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think; Number of Attendees: eight. Important constraints: Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think; Preferred Time for Reunion: yes we will meet before spring festival. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "events_coordination"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "high",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "coordinate people, time, and location constraints",
+      "create a feasible event plan",
+      "draft communication or logistics artifacts"
+    ],
+    "known_facts": [
+      "Rarely did organization work before, but feel know the basic logic",
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Number of Attendees: eight",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "remark: one from guangdong never visited jiangsu before",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s"
+    ],
+    "preferences": [
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s",
+      "Dietary Restrictions and Food Preferences: most like jiangsu cuisine, not sure if one 50s from guangdong likes jiangsu cuisine"
+    ],
+    "gaps_in_self_knowledge": [
+      "has unresolved preferences or constraints"
+    ],
+    "constraints_to_remember": [
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s",
+      "Dietary Restrictions and Food Preferences: most like jiangsu cuisine, not sure if one 50s from guangdong likes jiangsu cuisine",
+      "Rarely did organization work before, but feel know the basic logic"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "When asked directly, provide concrete constraints from known_facts and constraints_to_remember."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Organize a family reunion",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as itinerary, invitation draft, logistics checklist"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Rarely did organization work before, but feel know the basic logic",
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Number of Attendees: eight",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "remark: one from guangdong never visited jiangsu before",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s"
+    ],
+    "variant_axis": null,
+    "variant_description": null,
+    "extraction_warnings": []
+  },
+  {
+    "persona_id": "P2_variant_context_richness_low",
+    "persona_type": "controlled_variant",
+    "source_participant": "P2",
+    "source_anchor_id": "P2",
+    "goal": "Organize a weekly PhD game night",
+    "user_description": "A novice user working on: Organize a weekly PhD game night. Known context: Never organized game night before; But have a strong idea of how to do it; Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday. Important constraints: Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games; Never organized game night before. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "events_coordination"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "low",
+    "decision_style": "opinionated",
+    "communication_style": "balanced",
+    "task_objectives": [
+      "coordinate people, time, and location constraints",
+      "create a feasible event plan",
+      "draft communication or logistics artifacts"
+    ],
+    "known_facts": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it",
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Size of the Participant Group: We expect between 5-9 PhD students at game night",
+      "University name: Cedarwick Hollow University"
+    ],
+    "preferences": [
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games"
+    ],
+    "gaps_in_self_knowledge": [
+      "may not know the standard process for this goal"
+    ],
+    "constraints_to_remember": [
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Never organized game night before"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one to three concise sentences.",
+      "Provide specifics when asked, but do not front-load every detail.",
+      "Use a collaborative tone."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Organize a weekly PhD game night",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as itinerary, invitation draft, logistics checklist"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it"
+    ],
+    "variant_axis": "context_richness",
+    "variant_description": "low-context variant that answers with fewer specifics unless asked",
+    "extraction_warnings": [
+      "Controlled variant modifies context_richness from base persona"
+    ]
+  },
+  {
+    "persona_id": "P3_variant_context_richness_high",
+    "persona_type": "controlled_variant",
+    "source_participant": "P3",
+    "source_anchor_id": "P3",
+    "goal": "Land a job offer",
+    "user_description": "An intermediate user working on: Land a job offer. Known context: In the process of researching companies; Job Search Location: new york, new york; Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask. Important constraints: Job Search Location: new york, new york; Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL...",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "high",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify target opportunities",
+      "organize application or outreach materials",
+      "produce concrete next actions and tracking artifacts"
+    ],
+    "known_facts": [
+      "In the process of researching companies",
+      "Job Search Location: new york, new york",
+      "Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask",
+      "Target Industry or Job Type: software engineering job"
+    ],
+    "preferences": [
+      "Job Search Location: new york, new york",
+      "Target Industry or Job Type: software engineering job"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Job Search Location: new york, new york",
+      "Resume/CV summary: computer science background; machine learning concentration or experience; software engineering internship experience; research experience; technical skills include Python, Java, JavaScript, SQL, Flask",
+      "Target Industry or Job Type: software engineering job",
+      "In the process of researching companies"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Land a job offer",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as application tracker, outreach drafts, interview prep plan"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if advice ignores target role, location, or existing background"
+    ],
+    "evidence_quotes": [
+      "In the process of researching companies",
+      "Job Search Location: new york, new york"
+    ],
+    "variant_axis": "context_richness",
+    "variant_description": "high-context variant that provides richer constraints when prompted",
+    "extraction_warnings": [
+      "Controlled variant modifies context_richness from base persona"
+    ]
+  },
+  {
+    "persona_id": "P4_variant_decision_style_deferential",
+    "persona_type": "controlled_variant",
+    "source_participant": "P4",
+    "source_anchor_id": "P4",
+    "goal": "Prepare for the LSAT",
+    "user_description": "A novice user working on: Prepare for the LSAT. Known context: Know it will take lots of time and effort to prepare; Current Preparation Level: none; LSAT Exam Date: 2 years from now. Important constraints: Know it will take lots of time and effort to prepare; LSAT Exam Date: 2 years from now. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "deferential",
+    "communication_style": "terse",
+    "task_objectives": [
+      "choose a realistic preparation timeline",
+      "identify missing baseline information",
+      "turn study preparation into weekly actions"
+    ],
+    "known_facts": [
+      "Know it will take lots of time and effort to prepare",
+      "Current Preparation Level: none",
+      "LSAT Exam Date: 2 years from now"
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Know it will take lots of time and effort to prepare",
+      "LSAT Exam Date: 2 years from now"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Prepare for the LSAT",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as study schedule, resource checklist, progress tracker"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if the study timeline ignores the exam date or current preparation level"
+    ],
+    "evidence_quotes": [
+      "Know it will take lots of time and effort to prepare",
+      "Current Preparation Level: none"
+    ],
+    "variant_axis": "decision_style",
+    "variant_description": "deferential variant that asks the system to choose among options",
+    "extraction_warnings": [
+      "Controlled variant modifies decision_style from base persona"
+    ]
+  },
+  {
+    "persona_id": "P5_variant_decision_style_opinionated",
+    "persona_type": "controlled_variant",
+    "source_participant": "P5",
+    "source_anchor_id": "P5",
+    "goal": "Run social media to attract followers",
+    "user_description": "An intermediate user working on: Run social media to attract followers. Known context: Already had 900+ followers; Academic Schedule and Commitments: Work 90 hours a week; Current Social Media Status: 900 followers. Important constraints: Academic Schedule and Commitments: Work 90 hours a week; **Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "creative_personal"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "opinionated",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify audience and positioning",
+      "break the creative project into launch tasks",
+      "produce reusable planning artifacts"
+    ],
+    "known_facts": [
+      "Already had 900+ followers",
+      "Academic Schedule and Commitments: Work 90 hours a week",
+      "Current Social Media Status: 900 followers",
+      "Goals and Audience: PhD students at other US universities and other Chinese people in US",
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic"
+    ],
+    "preferences": [
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Academic Schedule and Commitments: Work 90 hours a week",
+      "**Preferred Posting Frequency**: I want to have more casual and personal topics, not so much about academic",
+      "Already had 900+ followers"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Run social media to attract followers",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as content plan, launch checklist, audience notes"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Already had 900+ followers",
+      "Academic Schedule and Commitments: Work 90 hours a week"
+    ],
+    "variant_axis": "decision_style",
+    "variant_description": "opinionated variant that pushes back on mismatched suggestions",
+    "extraction_warnings": [
+      "Controlled variant modifies decision_style from base persona"
+    ]
+  },
+  {
+    "persona_id": "P6_variant_communication_style_terse",
+    "persona_type": "controlled_variant",
+    "source_participant": "P6",
+    "source_anchor_id": "P6",
+    "goal": "Sublease a Manhattan apartment and move to Queens",
+    "user_description": "An intermediate user working on: Sublease a Manhattan apartment and move to Queens. Known context: Moved lots of times before - not sure about the sublease process; Note: the system suggests uploading lease agreement - but too long to upload.; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.. Important constraints: Moved lots of times before - not sure about the sublease process; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars. They need a planning assistan...",
+    "goal_domain_preferences": [
+      "everyday_admin_home"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "organize deadlines and logistics",
+      "track documents, messages, and decisions",
+      "produce a practical moving or admin checklist"
+    ],
+    "known_facts": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload.",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "preferences": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars."
+    ],
+    "gaps_in_self_knowledge": [
+      "has unresolved preferences or constraints"
+    ],
+    "constraints_to_remember": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Sublease a Manhattan apartment and move to Queens",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as moving checklist, message templates, timeline"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload."
+    ],
+    "variant_axis": "communication_style",
+    "variant_description": "terse variant that answers in short fragments",
+    "extraction_warnings": [
+      "Controlled variant modifies communication_style from base persona"
+    ]
+  },
+  {
+    "persona_id": "P7_variant_communication_style_verbose",
+    "persona_type": "controlled_variant",
+    "source_participant": "P7",
+    "source_anchor_id": "P7",
+    "goal": "Create a portfolio website for job applications",
+    "user_description": "An intermediate user working on: Create a portfolio website for job applications. Known context: I know I need template websites / HTML CSS; I know on the website I will show papers and projects, about me\u2026.. Important constraints: I know I need template websites / HTML CSS. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "low",
+    "decision_style": "collaborative",
+    "communication_style": "verbose",
+    "task_objectives": [
+      "clarify target opportunities",
+      "organize application or outreach materials",
+      "produce concrete next actions and tracking artifacts"
+    ],
+    "known_facts": [
+      "I know I need template websites / HTML CSS",
+      "I know on the website I will show papers and projects, about me\u2026."
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need elicitation before concrete planning"
+    ],
+    "constraints_to_remember": [
+      "I know I need template websites / HTML CSS"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Create a portfolio website for job applications",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as application tracker, outreach drafts, interview prep plan"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context",
+      "push back if advice ignores target role, location, or existing background"
+    ],
+    "evidence_quotes": [
+      "I know I need template websites / HTML CSS",
+      "I know on the website I will show papers and projects, about me\u2026."
+    ],
+    "variant_axis": "communication_style",
+    "variant_description": "verbose variant that explains reasoning and preferences",
+    "extraction_warnings": [
+      "Log record has no user_context entries",
+      "Controlled variant modifies communication_style from base persona"
+    ]
+  },
+  {
+    "persona_id": "P8_variant_expertise_level_novice",
+    "persona_type": "controlled_variant",
+    "source_participant": "P8",
+    "source_anchor_id": "P8",
+    "goal": "Prepare to deliver a first tutorial",
+    "user_description": "A novice user working on: Prepare to deliver a first tutorial. Known context: Never taught a class before; Know basic logistics; Educational Level of the Audience: Undergraduate freshman. Important constraints: Level: first time; Never taught a class before. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "career_education"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "high",
+    "decision_style": "opinionated",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify the user's current state",
+      "identify missing constraints",
+      "produce concrete planning artifacts"
+    ],
+    "known_facts": [
+      "Never taught a class before",
+      "Know basic logistics",
+      "Educational Level of the Audience: Undergraduate freshman",
+      "Format of the Tutorial: Presentation, questions and answers",
+      "Level: first time",
+      "Subject or Topic of the Tutorial: AI in Business"
+    ],
+    "preferences": [
+      "prefers help that is specific to their stated context"
+    ],
+    "gaps_in_self_knowledge": [
+      "may not know the standard process for this goal"
+    ],
+    "constraints_to_remember": [
+      "Level: first time",
+      "Never taught a class before"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "When asked directly, provide concrete constraints from known_facts and constraints_to_remember."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Prepare to deliver a first tutorial",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as checklist, timeline, decision aid"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Never taught a class before",
+      "Know basic logistics"
+    ],
+    "variant_axis": "expertise_level",
+    "variant_description": "novice variant with more uncertainty about task process",
+    "extraction_warnings": [
+      "Controlled variant modifies expertise_level from base persona"
+    ]
+  },
+  {
+    "persona_id": "P9_variant_expertise_level_intermediate",
+    "persona_type": "controlled_variant",
+    "source_participant": "P9",
+    "source_anchor_id": "P9",
+    "goal": "Start a personal YouTube channel",
+    "user_description": "A novice user working on: Start a personal YouTube channel. Known context: Have other social media accounts - but rarely post videos on them; Doesn\u2019t have a YouTube account yet; Channel Goals: create community for discussion, gain followers. Important constraints: Target Audience: i need help identifying them; Have other social media accounts - but rarely post videos on them. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "creative_personal"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "clarify audience and positioning",
+      "break the creative project into launch tasks",
+      "produce reusable planning artifacts"
+    ],
+    "known_facts": [
+      "Have other social media accounts - but rarely post videos on them",
+      "Doesn\u2019t have a YouTube account yet",
+      "Channel Goals: create community for discussion, gain followers",
+      "Target Audience: i need help identifying them",
+      "Video Creation Proficiency: pretty familiar",
+      "upload frequency: bi weekly"
+    ],
+    "preferences": [
+      "Target Audience: i need help identifying them"
+    ],
+    "gaps_in_self_knowledge": [
+      "may need help prioritizing among plausible next steps"
+    ],
+    "constraints_to_remember": [
+      "Target Audience: i need help identifying them",
+      "Have other social media accounts - but rarely post videos on them"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Start a personal YouTube channel",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as content plan, launch checklist, audience notes"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Have other social media accounts - but rarely post videos on them",
+      "Doesn\u2019t have a YouTube account yet"
+    ],
+    "variant_axis": "expertise_level",
+    "variant_description": "intermediate variant with some prior creative planning knowledge",
+    "extraction_warnings": [
+      "Controlled variant modifies expertise_level from base persona"
+    ]
+  },
+  {
+    "persona_id": "P10_variant_context_richness_medium",
+    "persona_type": "controlled_variant",
+    "source_participant": "P10",
+    "source_anchor_id": "P10",
+    "goal": "Organize a family reunion",
+    "user_description": "A novice user working on: Organize a family reunion. Known context: Rarely did organization work before, but feel know the basic logic; Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think; Number of Attendees: eight. Important constraints: Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think; Preferred Time for Reunion: yes we will meet before spring festival. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "events_coordination"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "terse",
+    "task_objectives": [
+      "coordinate people, time, and location constraints",
+      "create a feasible event plan",
+      "draft communication or logistics artifacts"
+    ],
+    "known_facts": [
+      "Rarely did organization work before, but feel know the basic logic",
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Number of Attendees: eight",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "remark: one from guangdong never visited jiangsu before",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s"
+    ],
+    "preferences": [
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s",
+      "Dietary Restrictions and Food Preferences: most like jiangsu cuisine, not sure if one 50s from guangdong likes jiangsu cuisine"
+    ],
+    "gaps_in_self_knowledge": [
+      "has unresolved preferences or constraints"
+    ],
+    "constraints_to_remember": [
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think",
+      "Preferred Time for Reunion: yes we will meet before spring festival",
+      "Preferences for Leisure Activities: yes two are 80s, four are 50s, two are 20s",
+      "Dietary Restrictions and Food Preferences: most like jiangsu cuisine, not sure if one 50s from guangdong likes jiangsu cuisine",
+      "Rarely did organization work before, but feel know the basic logic"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "When asked directly, provide concrete constraints from known_facts and constraints_to_remember."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Organize a family reunion",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as itinerary, invitation draft, logistics checklist"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Rarely did organization work before, but feel know the basic logic",
+      "Location of Family Members: five in jiangsu, two in beijing, one in guangdong, but we will all meet in jiangsu i think"
+    ],
+    "variant_axis": "context_richness",
+    "variant_description": "medium-context variant that gives enough detail but not exhaustive background",
+    "extraction_warnings": [
+      "Controlled variant modifies context_richness from base persona"
+    ]
+  },
+  {
+    "persona_id": "P2_variant_decision_style_collaborative",
+    "persona_type": "controlled_variant",
+    "source_participant": "P2",
+    "source_anchor_id": "P2",
+    "goal": "Organize a weekly PhD game night",
+    "user_description": "A novice user working on: Organize a weekly PhD game night. Known context: Never organized game night before; But have a strong idea of how to do it; Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday. Important constraints: Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games; Never organized game night before. They need a planning assistant to ask for missing details and turn the goal into concrete next steps.",
+    "goal_domain_preferences": [
+      "events_coordination"
+    ],
+    "expertise_level": "novice",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "balanced",
+    "task_objectives": [
+      "coordinate people, time, and location constraints",
+      "create a feasible event plan",
+      "draft communication or logistics artifacts"
+    ],
+    "known_facts": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it",
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Size of the Participant Group: We expect between 5-9 PhD students at game night",
+      "University name: Cedarwick Hollow University"
+    ],
+    "preferences": [
+      "Availability of PhD Students: Most PhD students are available in the evenings, after 7:30pm, and generally on the weekend nights like Friday and Saturday",
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games"
+    ],
+    "gaps_in_self_knowledge": [
+      "may not know the standard process for this goal"
+    ],
+    "constraints_to_remember": [
+      "Interests and Preferences of PhD Students: All STEM PhD students interested in fantasy and party games, like board games and card games",
+      "Never organized game night before"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one to three concise sentences.",
+      "Provide specifics when asked, but do not front-load every detail.",
+      "Use a collaborative tone."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Organize a weekly PhD game night",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as itinerary, invitation draft, logistics checklist"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Never organized game night before",
+      "But have a strong idea of how to do it"
+    ],
+    "variant_axis": "decision_style",
+    "variant_description": "collaborative variant that co-develops plans with the system",
+    "extraction_warnings": [
+      "Controlled variant modifies decision_style from base persona"
+    ]
+  },
+  {
+    "persona_id": "P6_variant_communication_style_balanced",
+    "persona_type": "controlled_variant",
+    "source_participant": "P6",
+    "source_anchor_id": "P6",
+    "goal": "Sublease a Manhattan apartment and move to Queens",
+    "user_description": "An intermediate user working on: Sublease a Manhattan apartment and move to Queens. Known context: Moved lots of times before - not sure about the sublease process; Note: the system suggests uploading lease agreement - but too long to upload.; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.. Important constraints: Moved lots of times before - not sure about the sublease process; Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars. They need a planning assistan...",
+    "goal_domain_preferences": [
+      "everyday_admin_home"
+    ],
+    "expertise_level": "intermediate",
+    "context_richness": "medium",
+    "decision_style": "collaborative",
+    "communication_style": "balanced",
+    "task_objectives": [
+      "organize deadlines and logistics",
+      "track documents, messages, and decisions",
+      "produce a practical moving or admin checklist"
+    ],
+    "known_facts": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload.",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars.",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "preferences": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars."
+    ],
+    "gaps_in_self_knowledge": [
+      "has unresolved preferences or constraints"
+    ],
+    "constraints_to_remember": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Apartment Preferences in Queens: I would like to find a 2 bedroom apartment with washing machine but I want it costs lower than 3000 dollars",
+      "Move-out Date: 12/31/2024",
+      "Objects need to move: bed, sofa, desk, 10 large boxes of personal belongings"
+    ],
+    "information_disclosure_policy": [
+      "Do not volunteer unstated details; reveal known facts only when the assistant asks relevant questions.",
+      "If the assistant asks about information not present in the persona, say that the user does not know yet or has not decided.",
+      "Keep answers brief and let the assistant elicit missing planning context."
+    ],
+    "response_style_rules": [
+      "Answer in one short sentence unless asked for specifics.",
+      "Avoid bullet lists unless the assistant explicitly requests a list.",
+      "Use plain, direct wording."
+    ],
+    "success_criteria": [
+      "receives a plan that is tailored to Sublease a Manhattan apartment and move to Queens",
+      "has clear next steps rather than generic advice",
+      "gets tangible artifacts such as moving checklist, message templates, timeline"
+    ],
+    "pushback_triggers": [
+      "push back if the assistant contradicts constraints_to_remember",
+      "push back if the assistant assumes facts not in known_facts",
+      "push back if the plan is generic and does not ask for missing context"
+    ],
+    "evidence_quotes": [
+      "Moved lots of times before - not sure about the sublease process",
+      "Note: the system suggests uploading lease agreement - but too long to upload."
+    ],
+    "variant_axis": "communication_style",
+    "variant_description": "balanced variant with concise but complete responses",
+    "extraction_warnings": [
+      "Controlled variant modifies communication_style from base persona"
+    ]
+  }
+]

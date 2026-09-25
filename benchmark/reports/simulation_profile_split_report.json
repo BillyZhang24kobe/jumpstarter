@@ -1,0 +1,40 @@
+{
+  "valid": true,
+  "source_profiles_path": "experiments/benchmark/data/simulation_profiles.json",
+  "validation_output_path": "experiments/benchmark/data/simulation_profiles_validation_limit10.json",
+  "test_output_path": "experiments/benchmark/data/simulation_profiles_test_excluding_validation.json",
+  "test_300_output_path": "experiments/benchmark/data/simulation_profiles_test_300.json",
+  "metadata_output_path": "experiments/benchmark/data/simulation_profile_split.json",
+  "total_profiles": 1200,
+  "validation_profile_count": 10,
+  "test_profile_count": 1190,
+  "test_300_profile_count": 300,
+  "validation_persona_count": 10,
+  "validation_goal_count": 10,
+  "validation_source_participant_count": 9,
+  "test_300_persona_count": 20,
+  "test_300_goal_count": 60,
+  "test_300_domain_counts": {
+    "career_education": 80,
+    "events_coordination": 50,
+    "creative_personal": 70,
+    "everyday_admin_home": 70,
+    "health_wellness_training": 30
+  },
+  "validation_profile_ids": [
+    "P2_base_G001",
+    "P3_base_G002",
+    "P4_base_G003",
+    "P5_base_G004",
+    "P6_base_G005",
+    "P7_base_G006",
+    "P8_base_G007",
+    "P9_base_G008",
+    "P10_base_G009",
+    "P2_variant_context_richness_low_G010"
+  ],
+  "errors": [],
+  "warnings": [
+    "Requested 10 different users, but only 9 distinct source participants are represented in the selected split. The split uses distinct simulation persona_id values and distinct goals."
+  ]
+}

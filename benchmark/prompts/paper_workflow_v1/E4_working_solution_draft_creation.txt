@@ -1,0 +1,1 @@
+My user has a main purpose: {main_purpose}. Please consider the following context information from my user: {user_context}. My user needs help with the current task {current_task}: {task_description}

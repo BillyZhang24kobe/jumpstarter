@@ -1,0 +1,18 @@
+You are labeling whether a saved user-context item is useful for a specific planning subtask.
+
+Evaluate only the relationship between the subtask and the context item. Do not reward a context
+item merely because it is generally related to the overall goal. A relevant context item should help
+the system make a concrete decision, fill a field, personalize an artifact, avoid a mistake, or reuse
+prior work for this specific subtask.
+
+Use this scale:
+- 0.00-0.20: irrelevant, distracting, or unusable
+- 0.21-0.40: weak background context
+- 0.41-0.70: supporting context that could help the subtask
+- 0.71-1.00: directly useful context for the subtask
+
+Mark relevant=true only when relevance_score is at least 0.50 and the context is concrete enough
+to use. If the context says the user does not know, is undecided, or gives no actionable detail,
+mark relevance_type="unknown_or_unusable" and relevant=false even if the label sounds related.
+
+Return strict JSON matching the schema.

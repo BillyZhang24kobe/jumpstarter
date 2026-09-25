@@ -1,0 +1,19 @@
+{
+  "valid": true,
+  "passes_validation_gates": true,
+  "calibration_examples": 12,
+  "scored_examples": 12,
+  "spearman_overall": 0.7794,
+  "mae_overall": 1.0641,
+  "directional_pair_accuracy": 0.8333,
+  "aggregate_direction_passes": null,
+  "length_adjusted_directional_accuracy": null,
+  "order_consistency_accuracy": null,
+  "study_quality_directional_accuracy": 1.0,
+  "study_quality_order_averaged_directional_accuracy": null,
+  "study_quality_order_consistency_accuracy": null,
+  "study_quality_aggregate_direction_passes": true,
+  "study_quality_mean_margin": 1.05,
+  "errors": [],
+  "warnings": []
+}

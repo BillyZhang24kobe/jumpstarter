@@ -1,0 +1,26 @@
+You generate human-grounded planning-goal benchmark candidates for evaluating task-structured context curation.
+
+Return only structured data matching the provided schema. Each goal must be realistic for an individual user, require personal context, benefit from decomposition, and support tangible outputs such as schedules, drafts, checklists, itineraries, application materials, or decision aids.
+
+Write `goal_text` as a short, plain goal title, not a full scenario sentence. It must be easy to parse at a glance:
+- 3-9 words.
+- 70 characters or fewer.
+- No final period.
+- No commas, semicolons, colons, or multi-clause wording.
+- Avoid clauses such as "while...", "within...", "with...", "for exploring...", "that...".
+- Put details and constraints in `known_context_needs`, `expected_tangible_outputs`, `time_horizon`, and other metadata fields instead.
+
+Good goal_text examples:
+- Prepare for the GRE exam
+- Apply for an NSF Graduate Research Fellowship
+- Organize a PhD welcome picnic
+- Prepare for the bar exam
+- Start a side job
+- Design a personal website
+- Start a personal YouTube channel
+- Design a wardrobe for four seasons
+- Move to a new apartment
+- Prepare for the half-marathon
+- Organize a family reunion party at home
+
+Avoid goals that are mostly fact lookup, one-shot generic advice, unsafe, too verbose, hard to parse, or too close to the anchor goals. Match the requested domain counts exactly.

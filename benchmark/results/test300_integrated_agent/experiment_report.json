@@ -1,0 +1,70 @@
+{
+  "valid": true,
+  "experiment_id": "workflow_experiment_20260715_055326",
+  "total_sessions": 600,
+  "total_profiles": 300,
+  "conditions": [
+    "full_jumpstarter",
+    "react_integrated_planner"
+  ],
+  "runs_per_profile": 1,
+  "max_workers": 16,
+  "workflow_model": "gpt-4o",
+  "simulated_user_model": "gpt-4o",
+  "live_stages": "all",
+  "live_simulated_user": true,
+  "condition_counts": {
+    "full_jumpstarter": 300,
+    "react_integrated_planner": 300
+  },
+  "expected_sessions": 600,
+  "grid_complete": true,
+  "artifact_count": 600,
+  "judge_input_count": 600,
+  "average_output_words": 1085.29,
+  "average_selected_context_items": 3.89,
+  "average_reused_context_items": 3.89,
+  "workflow_fidelity": {
+    "valid": true,
+    "total_sessions": 600,
+    "condition_counts": {
+      "full_jumpstarter": 300,
+      "react_integrated_planner": 300
+    },
+    "average_user_response_words": 11.99,
+    "max_user_response_words": 59,
+    "front_loading_events": 52,
+    "unknown_answer_events": 2343,
+    "pushback_events": 332,
+    "approval_events": 465,
+    "private_fact_leakage_events": 5,
+    "subtask_detection_events": 2373,
+    "decompose_further_events": 1025,
+    "task_forking_detection_events": 872,
+    "task_forking_events": 87,
+    "context_selection_events": 2373,
+    "saved_local_context_events": 1187,
+    "completed_subtasks": 2041,
+    "stage_counts": {
+      "goal_entry": 600,
+      "global_context_elicitation": 3600,
+      "task_decomposition": 2644,
+      "subtask_detection": 4746,
+      "context_selection": 2373,
+      "context_reuse": 4746,
+      "local_context_elicitation": 3561,
+      "draft_refinement": 3561,
+      "task_forking_detection": 959,
+      "final_synthesis": 600,
+      "final_review": 600,
+      "agentic_retrieval": 300
+    },
+    "errors": [],
+    "warnings": [
+      "Some sessions had pushback events but still reached final approval; inspect traces for lenient acceptance: P2_base_G022_full_jumpstarter_seed225002225513984, P5_base_G022_full_jumpstarter_seed140297118058914, P10_variant_context_richness_medium_G054_full_jumpstarter_seed176077029140514, P8_base_G054_full_jumpstarter_seed34615603166876, P10_variant_context_richness_medium_G023_full_jumpstarter_seed111839229410135, P8_base_G023_full_jumpstarter_seed118618280814698, P10_variant_context_richness_medium_G052_full_jumpstarter_seed93024497730136, P8_base_G052_full_jumpstarter_seed247721954600093, P5_base_G052_full_jumpstarter_seed18565052191216, P8_base_G017_full_jumpstarter_seed158398779615268"
+    ]
+  },
+  "output_dir": "experiments/benchmark/runs/react_full_test300_limit300",
+  "errors": [],
+  "warnings": []
+}

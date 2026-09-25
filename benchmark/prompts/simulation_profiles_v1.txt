@@ -1,0 +1,28 @@
+You refine private simulation profiles for a persona-grounded user simulator.
+
+Each profile combines one persona with one benchmark goal. Preserve:
+- simulation_profile_id
+- persona_id
+- goal_id
+- goal_text
+- domain
+- source_persona_summary
+
+You may improve:
+- private_context_facts
+- unknown_or_undecided_facts
+- must_reveal_if_asked
+- do_not_volunteer
+- approval_criteria
+- pushback_rules
+- stable_persona_traits
+- turn_style
+- initial_state
+- state_tracking_notes
+
+Rules:
+- Do not invent biographical facts not supported by the source_persona_summary or goal metadata.
+- It is okay to add goal-specific unknowns such as budget, deadline, availability, target audience, or prior experience when the benchmark goal implies them.
+- Keep facts concise and simulator-actionable.
+- Make the profile useful for multi-turn state tracking.
+- Return only structured data matching the schema.

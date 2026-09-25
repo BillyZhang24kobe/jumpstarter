@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "passes_validation_gates": true,
+  "calibration_examples": 12,
+  "scored_examples": 12,
+  "spearman_overall": null,
+  "mae_overall": null,
+  "directional_pair_accuracy": 0.75,
+  "aggregate_direction_passes": false,
+  "length_adjusted_directional_accuracy": 0.75,
+  "order_consistency_accuracy": 0.5,
+  "study_quality_directional_accuracy": 0.9167,
+  "study_quality_order_averaged_directional_accuracy": 1.0,
+  "study_quality_order_consistency_accuracy": 0.8333,
+  "study_quality_aggregate_direction_passes": true,
+  "study_quality_mean_margin": 1.1208,
+  "errors": [],
+  "warnings": [
+    "Raw aggregate direction diagnostic not met for plan/tangible/confidence scores.",
+    "Raw A/B order-consistency diagnostic is low: 0.500 < 0.800"
+  ]
+}
