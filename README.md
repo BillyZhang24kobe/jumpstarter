@@ -28,7 +28,7 @@ export OPENAI_ORG_ID="<your-openai-org-id>"  # optional
 
 ## Reproduce the paper's numbers
 
-These commands read the judged results in [`benchmark/results/`](benchmark/results/) and need no API key:
+The paper's simulation study evaluates a balanced subset of 300 of the 1,200 simulation profiles: five per goal and fifteen per persona. These commands read the judged results of those runs in [`benchmark/results/`](benchmark/results/) and need no API key:
 
 ```bash
 # Table 2 and the mechanism numbers -> benchmark/reports/paper_tables.{md,json}, paper_tables_table2.tex
@@ -60,6 +60,24 @@ python -m benchmark.cli run-workflow-experiment --conditions all,single_turn_dec
 
 The paper's runs used live GPT-4o workflow stages and simulated users, and the GPT-5.5 judge. See [`benchmark/README.md`](benchmark/README.md) for the full pipeline and the command behind each result.
 
+### Larger-scale evaluation
+
+The paper uses 300 profiles for budget reasons. The release includes all 1,200, so you can run the benchmark at full scale. To evaluate at a larger scale, run conditions on all 1,200 profiles or on the 1,190 profiles outside the validation split. `BASELINE` sets the condition that the summary's paired deltas compare against:
+
+```bash
+# All 1,200 simulation profiles
+PROFILE_SET=full LIMIT=1200 BASELINE=flat_decomposition \
+  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
+  bash benchmark/run_live_workflow_benchmark.sh
+
+# The 1,190 held-out profiles (everything except the 10-profile validation split)
+PROFILE_SET=test LIMIT=1190 BUILD_PROFILE_SPLIT=0 BASELINE=flat_decomposition \
+  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
+  bash benchmark/run_live_workflow_benchmark.sh
+```
+
+Each run simulates every profile under every listed condition, judges the final plans, and writes `score_summary.md` to its run directory. Live runs make one session per profile and condition, so budget accordingly.
+
 ## Paper to code
 
 | In the paper | In the code |
@@ -82,9 +100,9 @@ Condition keys in the code and results, and their names in the paper:
 | --- | --- | --- |
 | `flat_decomposition` | JumpStarter-Shallow | The primary system: one level of subtasks, elicitation, task-local context selection, saved drafts, and reuse |
 | `full_jumpstarter` | JumpStarter-Recursive | The same workflow with recursive decomposition |
-| `all_context` | All-context prompting | Every context item goes to every subtask |
+| `all_context` | No context selection | Every context item goes to every subtask |
 | `random_selection` | Random context selection | A random subset of context per subtask |
-| `no_selection` | No context selection | Subtask drafts without selected context |
+| `no_selection` | No selected context\* | Subtask drafts without selected context |
 | `no_reuse` | No context reuse | Drafts are saved but not reused |
 | `no_elicitation` | No elicitation | No proactive context questions |
 | `chatgpt_vanilla` | ChatGPT vanilla | One-shot GPT-4o answer |
@@ -94,10 +112,10 @@ Condition keys in the code and results, and their names in the paper:
 | `adapt_recursive_decomposition` | ADaPT-style recursive decomposition | Recursive decompose-and-execute planner |
 | `ask_before_plan` | Ask-before-plan | Clarification loop, then planning |
 | `unstructured_memory_rag` | Unstructured memory-RAG | Retrieval over an unstructured memory of context snippets |
-| `long_context_planner` | Long-context planner | All context in one long prompt |
+| `long_context_planner` | Long-context planner\* | All context in one long prompt |
 | `react_integrated_planner` | Integrated agentic planner | Elicitation, retrieval, a simulated browse tool, and per-subtask selection, without draft reuse |
 
-The component ablations (`all_context` through `no_elicitation`) modify the recursive workflow.
+The component ablations (`all_context` through `no_elicitation`) modify the recursive workflow. \* These conditions were run and their results are in `benchmark/results/`, but they are not reported in the paper's tables.
 
 ## Data and privacy
 

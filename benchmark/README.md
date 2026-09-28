@@ -25,7 +25,7 @@ All comparisons pair conditions on the same 300 held-out simulation profiles by 
 
 ## Results
 
-`results/` holds the judged results of the three runs reported in the paper, all on `data/simulation_profiles_test_300.json`:
+`results/` holds the judged results of the three runs reported in the paper. All three use `data/simulation_profiles_test_300.json`, the balanced 300-profile evaluation subset; [Run experiments](#run-experiments) shows how to run on all 1,200 profiles:
 
 | Directory | Conditions | Original run name |
 | --- | --- | --- |
@@ -113,7 +113,23 @@ PROFILE_SET=test-300 CONDITIONS=full_jumpstarter,react_integrated_planner LIMIT=
 
 Then point `paper-tables` and `analyze-failure-cases` at the new run directories with `--main-run`, `--single-turn-run`, and `--agent-run`. Run a new condition in its own run directory. Adding conditions to an existing directory re-blinds its artifacts and forces everything to be judged again.
 
-Useful runner variables: `CONDITIONS` or `CONDITION_SET` (`primary`, `component_ablation`, `agent_baselines`, `all`), `PROFILE_SET` (`validation`, `test`, `test-300`), `LIMIT`, `LIVE_STAGES` (`drafts`, `planning`, `all`), `MAX_WORKERS`, `JUDGE_MAX_WORKERS`, `RUN_DIR`, and the model variables `WORKFLOW_MODEL`, `SIMULATED_USER_MODEL`, `JUDGE_MODEL`, `CONTEXT_RELEVANCE_MODEL`. Keep `BUILD_PROFILE_SPLIT=0` to use the released splits.
+To evaluate at a larger scale, run conditions on all 1,200 profiles or on the 1,190 profiles outside the validation split. `BASELINE` sets the condition that the summary's paired deltas compare against:
+
+```bash
+# All 1,200 simulation profiles
+PROFILE_SET=full LIMIT=1200 BASELINE=flat_decomposition \
+  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
+  bash benchmark/run_live_workflow_benchmark.sh
+
+# The 1,190 held-out profiles (everything except the 10-profile validation split)
+PROFILE_SET=test LIMIT=1190 BUILD_PROFILE_SPLIT=0 BASELINE=flat_decomposition \
+  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
+  bash benchmark/run_live_workflow_benchmark.sh
+```
+
+Each run simulates every profile under every listed condition, judges the final plans, and writes `score_summary.md` to its run directory. Live runs make one session per profile and condition, so budget accordingly.
+
+Useful runner variables: `CONDITIONS` or `CONDITION_SET` (`primary`, `component_ablation`, `agent_baselines`, `all`), `PROFILE_SET` (`full` for all 1,200 profiles, `validation`, `test`, `test-300`), `LIMIT`, `LIVE_STAGES` (`drafts`, `planning`, `all`), `MAX_WORKERS`, `JUDGE_MAX_WORKERS`, `RUN_DIR`, and the model variables `WORKFLOW_MODEL`, `SIMULATED_USER_MODEL`, `JUDGE_MODEL`, `CONTEXT_RELEVANCE_MODEL`. Keep `BUILD_PROFILE_SPLIT=0` to use the released splits.
 
 ## Judge
 

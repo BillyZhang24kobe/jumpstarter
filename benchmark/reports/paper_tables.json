@@ -116,7 +116,7 @@
     },
     {
       "condition": "all_context",
-      "paper_name": "All-context prompting",
+      "paper_name": "No context selection",
       "run": "main",
       "n": 300,
       "mean": 4.0817,
@@ -164,7 +164,7 @@
     },
     {
       "condition": "no_selection",
-      "paper_name": "No context selection",
+      "paper_name": "No selected context",
       "run": "main",
       "n": 300,
       "mean": 4.2067,

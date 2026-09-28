@@ -11,9 +11,9 @@ Paired over the 300 held-out test profiles. Delta = first-named condition minus 
 | ChatGPT + elicited context (`chatgpt_with_elicited_context`) | main | 300 | 3.6992 | +0.5707 | [+0.5092, +0.6322] | 257/6/37 |
 | ChatGPT + structured summary (`chatgpt_with_structured_summary`) | main | 300 | 3.7215 | +0.5483 | [+0.4897, +0.6070] | 260/6/34 |
 | Single-turn decomposition (`single_turn_decomposition`) | single_turn | 300 | 4.0503 | +0.2195 | [+0.1637, +0.2753] | 197/11/92 |
-| All-context prompting (`all_context`) | main | 300 | 4.0817 | +0.1882 | [+0.1275, +0.2488] | 178/9/113 |
+| No context selection (`all_context`) | main | 300 | 4.0817 | +0.1882 | [+0.1275, +0.2488] | 178/9/113 |
 | Random context selection (`random_selection`) | main | 300 | 4.1418 | +0.1280 | [+0.0690, +0.1870] | 171/17/112 |
-| No context selection (`no_selection`) | main | 300 | 4.2067 | +0.0632 | [+0.0041, +0.1222] | 156/12/132 |
+| No selected context (`no_selection`) | main | 300 | 4.2067 | +0.0632 | [+0.0041, +0.1222] | 156/12/132 |
 | No context reuse (`no_reuse`) | main | 300 | 4.0880 | +0.1818 | [+0.1251, +0.2385] | 180/17/103 |
 | No elicitation (`no_elicitation`) | main | 300 | 4.1903 | +0.0795 | [+0.0270, +0.1320] | 163/15/122 |
 | JumpStarter-Recursive (`full_jumpstarter`) | main | 300 | 4.1967 | +0.0732 | [+0.0167, +0.1296] | 158/12/130 |
