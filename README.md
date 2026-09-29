@@ -62,73 +62,7 @@ The paper's runs used live GPT-4o workflow stages and simulated users, and the G
 
 ### Larger-scale evaluation
 
-The paper uses 300 profiles for budget reasons. The release includes all 1,200, so you can run the benchmark at full scale. To evaluate at a larger scale, run conditions on all 1,200 profiles or on the 1,190 profiles outside the validation split. `BASELINE` sets the condition that the summary's paired deltas compare against:
-
-```bash
-# All 1,200 simulation profiles
-PROFILE_SET=full LIMIT=1200 BASELINE=flat_decomposition \
-  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
-  bash benchmark/run_live_workflow_benchmark.sh
-
-# The 1,190 held-out profiles (everything except the 10-profile validation split)
-PROFILE_SET=test LIMIT=1190 BUILD_PROFILE_SPLIT=0 BASELINE=flat_decomposition \
-  CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
-  bash benchmark/run_live_workflow_benchmark.sh
-```
-
-Each run simulates every profile under every listed condition, judges the final plans, and writes `score_summary.md` to its run directory. Live runs make one session per profile and condition, so budget accordingly.
-
-## Paper to code
-
-| In the paper | In the code |
-| --- | --- |
-| Elicitation, selection, reuse, decomposition, subtask detection, task forking | [`app/server.py`](app/server.py) routes, with the decomposition and drafting prompts in [`app/static/task.js`](app/static/task.js); the same prompts as text files in [`benchmark/prompts/paper_workflow_v1/`](benchmark/prompts/paper_workflow_v1/) |
-| Benchmark construction: 60 goals, 20 personas, 1,200 simulation profiles | [`benchmark/pipeline.py`](benchmark/pipeline.py), [`personas.py`](benchmark/personas.py), [`simulation_profiles.py`](benchmark/simulation_profiles.py); outputs in [`benchmark/data/`](benchmark/data/) |
-| Simulated users and their calibrated decision policies | [`benchmark/workflow_simulator.py`](benchmark/workflow_simulator.py), [`user_decision_calibration.py`](benchmark/user_decision_calibration.py) |
-| JumpStarter variants, ablations, and baselines | `CONDITION_DESCRIPTIONS` in [`benchmark/workflow_simulator.py`](benchmark/workflow_simulator.py) (table below) |
-| LLM judge and the study-quality composite | [`benchmark/judge.py`](benchmark/judge.py), prompts `benchmark/prompts/judge_*.txt` |
-| Context-relevance labeler (context precision) | [`benchmark/context_relevance.py`](benchmark/context_relevance.py) |
-| Table 2 and the mechanism numbers | [`benchmark/paper_tables.py`](benchmark/paper_tables.py) (`paper-tables`) |
-| Failure-case analysis | [`benchmark/failure_analysis.py`](benchmark/failure_analysis.py) (`analyze-failure-cases`) |
-| Quality vs. context-efficiency figure | [`benchmark/plot_quality_context_efficiency.py`](benchmark/plot_quality_context_efficiency.py) |
-
-## Conditions
-
-Condition keys in the code and results, and their names in the paper:
-
-| Key | Paper name | What it tests |
-| --- | --- | --- |
-| `flat_decomposition` | JumpStarter-Shallow | The primary system: one level of subtasks, elicitation, task-local context selection, saved drafts, and reuse |
-| `full_jumpstarter` | JumpStarter-Recursive | The same workflow with recursive decomposition |
-| `all_context` | No context selection | Every context item goes to every subtask |
-| `random_selection` | Random context selection | A random subset of context per subtask |
-| `no_selection` | No selected context\* | Subtask drafts without selected context |
-| `no_reuse` | No context reuse | Drafts are saved but not reused |
-| `no_elicitation` | No elicitation | No proactive context questions |
-| `chatgpt_vanilla` | ChatGPT vanilla | One-shot GPT-4o answer |
-| `chatgpt_with_elicited_context` | ChatGPT + elicited context | One-shot answer with the same elicited context |
-| `chatgpt_with_structured_summary` | ChatGPT + structured summary | One-shot answer with a structured summary of that context |
-| `single_turn_decomposition` | Single-turn decomposition | One turn asked to decompose and draft every subtask, with the same elicited context |
-| `adapt_recursive_decomposition` | ADaPT-style recursive decomposition | Recursive decompose-and-execute planner |
-| `ask_before_plan` | Ask-before-plan | Clarification loop, then planning |
-| `unstructured_memory_rag` | Unstructured memory-RAG | Retrieval over an unstructured memory of context snippets |
-| `long_context_planner` | Long-context planner\* | All context in one long prompt |
-| `react_integrated_planner` | Integrated agentic planner | Elicitation, retrieval, a simulated browse tool, and per-subtask selection, without draft reuse |
-
-The component ablations (`all_context` through `no_elicitation`) modify the recursive workflow. \* These conditions were run and their results are in `benchmark/results/`, but they are not reported in the paper's tables.
-
-## Data and privacy
-
-**Released:**
-- the 60 benchmark goals, 20 personas, and 1,200 simulation profiles with their splits;
-- all prompts;
-- the simulated-user calibration rates;
-- the judge-calibration reports;
-- the judged results of the three runs reported in the paper.
-
-**Not released:** the raw user-study logs, participant documents, and the human-study judge-calibration packages, which contain participant data. Commands that rebuild data from those files will not run from this repository: `build-anchors`, `build-all`, `build-personas`, `build-judge-calibration`, `build-study-judge-inputs`, and `build-user-decision-calibration`. The outputs they produced are included in `benchmark/data/` and `benchmark/reports/`.
-
-Personas are derived from study participants. Names are removed and institutions are replaced with a fictional one. The full simulation traces (about 2.3 GB) are also not included; `benchmark/results/` keeps what the tables and figures need.
+The paper uses 300 profiles for budget reasons, but the release includes all 1,200. See [Larger-scale evaluation](benchmark/README.md#larger-scale-evaluation) in the benchmark README for commands that run on all 1,200 profiles.
 
 ## License
 

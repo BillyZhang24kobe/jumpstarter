@@ -25,7 +25,7 @@ All comparisons pair conditions on the same 300 held-out simulation profiles by 
 
 ## Results
 
-`results/` holds the judged results of the three runs reported in the paper. All three use `data/simulation_profiles_test_300.json`, the balanced 300-profile evaluation subset; [Run experiments](#run-experiments) shows how to run on all 1,200 profiles:
+`results/` holds the judged results of the three runs reported in the paper. All three use `data/simulation_profiles_test_300.json`, the balanced 300-profile evaluation subset; [Larger-scale evaluation](#larger-scale-evaluation) shows how to run on all 1,200 profiles:
 
 | Directory | Conditions | Original run name |
 | --- | --- | --- |
@@ -47,6 +47,31 @@ Each directory contains:
 | `run_config.json`, `experiment_report.json`, `workflow_fidelity_report.json`, `judge_run_report.json` | Run settings and checks |
 
 The full session traces, about 2.3 GB, are not included. The trace metrics in `score_summary.json` and the token counts in `workflow_prompt_tokens.json` were computed from them.
+
+## Conditions
+
+The results use condition keys. Their names in the paper:
+
+| Key | Paper name | What it tests |
+| --- | --- | --- |
+| `flat_decomposition` | JumpStarter-Shallow | The primary system: one level of subtasks, elicitation, task-local context selection, saved drafts, and reuse |
+| `full_jumpstarter` | JumpStarter-Recursive | The same workflow with recursive decomposition |
+| `all_context` | No context selection | Every context item goes to every subtask |
+| `random_selection` | Random context selection | A random subset of context per subtask |
+| `no_selection` | No selected context\* | Subtask drafts without selected context |
+| `no_reuse` | No context reuse | Drafts are saved but not reused |
+| `no_elicitation` | No elicitation | No proactive context questions |
+| `chatgpt_vanilla` | ChatGPT vanilla | One-shot GPT-4o answer |
+| `chatgpt_with_elicited_context` | ChatGPT + elicited context | One-shot answer with the same elicited context |
+| `chatgpt_with_structured_summary` | ChatGPT + structured summary | One-shot answer with a structured summary of that context |
+| `single_turn_decomposition` | Single-turn decomposition | One turn asked to decompose and draft every subtask, with the same elicited context |
+| `adapt_recursive_decomposition` | ADaPT-style recursive decomposition | Recursive decompose-and-execute planner |
+| `ask_before_plan` | Ask-before-plan | Clarification loop, then planning |
+| `unstructured_memory_rag` | Unstructured memory-RAG | Retrieval over an unstructured memory of context snippets |
+| `long_context_planner` | Long-context planner\* | All context in one long prompt |
+| `react_integrated_planner` | Integrated agentic planner | Elicitation, retrieval, a simulated browse tool, and per-subtask selection, without draft reuse |
+
+The component ablations (`all_context` through `no_elicitation`) modify the recursive workflow. \* These conditions were run and their results are in `results/`, but they are not reported in the paper's tables.
 
 ## Layout
 
@@ -81,7 +106,7 @@ The full session traces, about 2.3 GB, are not included. The trace metrics in `s
 | `data/user_decision_calibration.json` | Decision rates the simulated user samples from (accepting a task tree, decomposing, saving drafts, completing nodes) |
 | `data/generated_candidates.json`, `data/filter_decisions.json`, `fixtures/generated_goals.json` | Goal candidates generated with GPT-5.5 and the filter decisions that produced the 48 synthesized goals |
 
-The goals, personas, and decision rates were built from the user-study logs, which are not released. The commands that read those logs (`build-anchors`, `build-all`, `build-personas`, `build-user-decision-calibration`, and the judge-calibration builders) will not run from the public repository. Their outputs are frozen in `data/` and `reports/`.
+The goals, personas, and decision rates were built from the user-study logs, which contain participant data and are not released. Personas keep no participant names, and institutions are replaced with a fictional one. The commands that read those logs (`build-anchors`, `build-all`, `build-personas`, `build-user-decision-calibration`, `build-judge-calibration`, and `build-study-judge-inputs`) will not run from this repository; their outputs are frozen in `data/` and `reports/`.
 
 ## Run experiments
 
@@ -113,7 +138,9 @@ PROFILE_SET=test-300 CONDITIONS=full_jumpstarter,react_integrated_planner LIMIT=
 
 Then point `paper-tables` and `analyze-failure-cases` at the new run directories with `--main-run`, `--single-turn-run`, and `--agent-run`. Run a new condition in its own run directory. Adding conditions to an existing directory re-blinds its artifacts and forces everything to be judged again.
 
-To evaluate at a larger scale, run conditions on all 1,200 profiles or on the 1,190 profiles outside the validation split. `BASELINE` sets the condition that the summary's paired deltas compare against:
+### Larger-scale evaluation
+
+The paper evaluates 300 profiles for budget reasons. To evaluate at a larger scale, run conditions on all 1,200 profiles or on the 1,190 profiles outside the validation split. `BASELINE` sets the condition that the summary's paired deltas compare against:
 
 ```bash
 # All 1,200 simulation profiles
