@@ -106,6 +106,8 @@ The component ablations (`all_context` through `no_elicitation`) modify the recu
 | `data/user_decision_calibration.json` | Decision rates the simulated user samples from (accepting a task tree, decomposing, saving drafts, completing nodes) |
 | `data/generated_candidates.json`, `data/filter_decisions.json`, `fixtures/generated_goals.json` | Goal candidates generated with GPT-5.5 and the filter decisions that produced the 48 synthesized goals |
 
+All data are in English. They are intended for research on planning assistants and simulated-user evaluation, not for drawing conclusions about the study participants.
+
 The goals, personas, and decision rates were built from the user-study logs, which contain participant data and are not released. Personas keep no participant names, and institutions are replaced with a fictional one. The commands that read those logs (`build-anchors`, `build-all`, `build-personas`, `build-user-decision-calibration`, `build-judge-calibration`, and `build-study-judge-inputs`) will not run from this repository; their outputs are frozen in `data/` and `reports/`.
 
 ## Run experiments
@@ -120,23 +122,45 @@ python -m benchmark.cli analyze-workflow-experiment benchmark/runs/smoke
 
 Without `--live`, `run-judge` gives heuristic dry-run scores, which are useful only for checking the pipeline.
 
-The paper's runs used live GPT-4o workflow stages and GPT-4o simulated users, the GPT-5.5 judge, and the GPT-5.4-mini relevance labeler. `run_live_workflow_benchmark.sh` runs all four steps. These commands recreate the three runs; they make many API calls, and LLM outputs vary, so the scores will not match `results/` exactly:
+### Live runs
+
+The paper's runs used live GPT-4o workflow stages and GPT-4o simulated users, the GPT-5.5 judge, and the GPT-5.4-mini relevance labeler. `run_live_workflow_benchmark.sh` runs every step (simulate, judge, label, analyze) and needs `OPENAI_API_KEY`. Start with a small run, which compares JumpStarter-Shallow with vanilla ChatGPT on 5 profiles:
 
 ```bash
-# Main experiment: 14 conditions
-PROFILE_SET=test-300 CONDITION_SET=all LIMIT=300 BUILD_PROFILE_SPLIT=0 RUN_CONTEXT_RELEVANCE_LABELER=1 \
-  bash benchmark/run_live_workflow_benchmark.sh
-
-# Single-turn decomposition baseline
-PROFILE_SET=test-300 CONDITIONS=single_turn_decomposition LIMIT=300 BUILD_PROFILE_SPLIT=0 \
-  bash benchmark/run_live_workflow_benchmark.sh
-
-# Integrated agentic planner, with JumpStarter-Recursive rerun for pairing
-PROFILE_SET=test-300 CONDITIONS=full_jumpstarter,react_integrated_planner LIMIT=300 BUILD_PROFILE_SPLIT=0 \
+PROFILE_SET=test-300 LIMIT=5 CONDITIONS=flat_decomposition,chatgpt_vanilla BASELINE=chatgpt_vanilla \
   bash benchmark/run_live_workflow_benchmark.sh
 ```
 
-Then point `paper-tables` and `analyze-failure-cases` at the new run directories with `--main-run`, `--single-turn-run`, and `--agent-run`. Run a new condition in its own run directory. Adding conditions to an existing directory re-blinds its artifacts and forces everything to be judged again.
+The script prints its run directory, `benchmark/runs/workflow_experiment_…`, and ends by writing `score_summary.md` there. That file has each condition's mean study-quality score and the paired difference from `BASELINE`.
+
+**Cost.** Live runs call the OpenAI API many times. A JumpStarter session calls GPT-4o at every workflow stage and for every simulated-user answer, while the one-shot ChatGPT baselines make one or a few calls. The judge makes two calls per session: evidence extraction, then scoring. The paper's main experiment has 4,200 sessions (14 conditions × 300 profiles). We did not log API usage for these runs, so check your usage after the small run before scaling up.
+
+These commands recreate the paper's three runs. LLM outputs vary, so the scores will not match `results/` exactly:
+
+```bash
+# Main experiment: 14 conditions
+PROFILE_SET=test-300 CONDITION_SET=all LIMIT=300 RUN_CONTEXT_RELEVANCE_LABELER=1 \
+  bash benchmark/run_live_workflow_benchmark.sh
+
+# Single-turn decomposition baseline
+PROFILE_SET=test-300 CONDITIONS=single_turn_decomposition LIMIT=300 \
+  bash benchmark/run_live_workflow_benchmark.sh
+
+# Integrated agentic planner, with JumpStarter-Recursive rerun for pairing
+PROFILE_SET=test-300 CONDITIONS=full_jumpstarter,react_integrated_planner LIMIT=300 \
+  bash benchmark/run_live_workflow_benchmark.sh
+```
+
+Then build the tables and failure analysis from your runs. Use `--output-dir` so the committed reports in `reports/` are not overwritten:
+
+```bash
+python -m benchmark.cli paper-tables --output-dir benchmark/runs/my_tables \
+  --main-run benchmark/runs/<main run> --single-turn-run benchmark/runs/<single-turn run> --agent-run benchmark/runs/<agent run>
+python -m benchmark.cli analyze-failure-cases --output-dir benchmark/runs/my_tables \
+  --main-run benchmark/runs/<main run> --single-turn-run benchmark/runs/<single-turn run>
+```
+
+Run a new condition in its own run directory. Adding conditions to an existing directory re-blinds its artifacts and forces everything to be judged again.
 
 ### Larger-scale evaluation
 
@@ -149,14 +173,29 @@ PROFILE_SET=full LIMIT=1200 BASELINE=flat_decomposition \
   bash benchmark/run_live_workflow_benchmark.sh
 
 # The 1,190 held-out profiles (everything except the 10-profile validation split)
-PROFILE_SET=test LIMIT=1190 BUILD_PROFILE_SPLIT=0 BASELINE=flat_decomposition \
+PROFILE_SET=test LIMIT=1190 BASELINE=flat_decomposition \
   CONDITIONS=flat_decomposition,full_jumpstarter,single_turn_decomposition \
   bash benchmark/run_live_workflow_benchmark.sh
 ```
 
-Each run simulates every profile under every listed condition, judges the final plans, and writes `score_summary.md` to its run directory. Live runs make one session per profile and condition, so budget accordingly.
+Each run simulates every profile under every listed condition, judges the final plans, and writes `score_summary.md` to its run directory. A run makes one session per profile and condition, so 1,200 profiles × 3 conditions is 3,600 sessions.
 
-Useful runner variables: `CONDITIONS` or `CONDITION_SET` (`primary`, `component_ablation`, `agent_baselines`, `all`), `PROFILE_SET` (`full` for all 1,200 profiles, `validation`, `test`, `test-300`), `LIMIT`, `LIVE_STAGES` (`drafts`, `planning`, `all`), `MAX_WORKERS`, `JUDGE_MAX_WORKERS`, `RUN_DIR`, and the model variables `WORKFLOW_MODEL`, `SIMULATED_USER_MODEL`, `JUDGE_MODEL`, `CONTEXT_RELEVANCE_MODEL`. Keep `BUILD_PROFILE_SPLIT=0` to use the released splits.
+### Runner variables
+
+| Variable | Default | Meaning |
+| --- | --- | --- |
+| `CONDITIONS` | — | Comma-separated condition keys (see [Conditions](#conditions)); overrides `CONDITION_SET` |
+| `CONDITION_SET` | `primary` | `primary`, `component_ablation`, `agent_baselines`, or `all` (the paper's 14) |
+| `PROFILE_SET` | `full` | `full` (1,200 profiles), `test` (1,190), `test-300` (the paper's 300), or `validation` (10) |
+| `LIMIT` | `10` | Number of profiles to run, taken from the start of the profile set |
+| `BASELINE` | `full_jumpstarter` | Condition that `score_summary.md` compares the others against |
+| `SEED` | `42` | Random seed for the simulated user's decisions and for random context selection |
+| `RUN_DIR` | `benchmark/runs/workflow_experiment_…` | Output directory |
+| `MAX_WORKERS`, `JUDGE_MAX_WORKERS` | `6`, `4` | Parallel sessions and judge calls; lower them if you hit rate limits |
+| `WORKFLOW_MODEL`, `SIMULATED_USER_MODEL`, `JUDGE_MODEL`, `CONTEXT_RELEVANCE_MODEL` | `gpt-4o`, `gpt-4o`, `gpt-5.5`, `gpt-5.4-mini` | Models; the defaults are the paper's |
+| `RUN_CONTEXT_RELEVANCE_LABELER` | `0` | `1` also labels context relevance (context precision) |
+| `LIVE_STAGES` | `all` | Workflow stages that call the model: `drafts`, `planning`, or `all` |
+| `BUILD_PROFILE_SPLIT` | `0` | `1` rebuilds the profile splits in `data/`; the result is identical to the released files |
 
 ## Judge
 

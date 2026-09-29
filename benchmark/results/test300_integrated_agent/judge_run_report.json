@@ -1,7 +1,7 @@
 {
   "valid": true,
-  "input_path": "experiments/benchmark/runs/react_full_test300_limit300/judge_inputs_blinded.jsonl",
-  "output_path": "experiments/benchmark/runs/react_full_test300_limit300/judge_scores.jsonl",
+  "input_path": "benchmark/runs/react_full_test300_limit300/judge_inputs_blinded.jsonl",
+  "output_path": "benchmark/runs/react_full_test300_limit300/judge_scores.jsonl",
   "model": "gpt-5.5",
   "dry_run": false,
   "max_workers": 8,

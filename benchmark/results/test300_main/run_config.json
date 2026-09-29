@@ -1,6 +1,6 @@
 {
   "experiment_id": "workflow_experiment_20260510_012938",
-  "profiles_path": "experiments/benchmark/data/simulation_profiles_test_300.json",
+  "profiles_path": "benchmark/data/simulation_profiles_test_300.json",
   "conditions": [
     "full_jumpstarter",
     "all_context",
@@ -28,7 +28,7 @@
   "max_workers": 6,
   "runner": "live_workflow_experiment",
   "prompt_version": "paper_workflow_v1",
-  "prompt_dir": "/home/billyzhang/JourneyLLM/journeyLLM_deploy/experiments/benchmark/prompts/paper_workflow_v1",
+  "prompt_dir": "benchmark/prompts/paper_workflow_v1",
   "prompt_ids": [
     "context_selection_draft",
     "global_context_elicitation",

@@ -64,7 +64,7 @@
       "Some sessions had pushback events but still reached final approval; inspect traces for lenient acceptance: P2_base_G022_full_jumpstarter_seed225002225513984, P5_base_G022_full_jumpstarter_seed140297118058914, P10_variant_context_richness_medium_G054_full_jumpstarter_seed176077029140514, P8_base_G054_full_jumpstarter_seed34615603166876, P10_variant_context_richness_medium_G023_full_jumpstarter_seed111839229410135, P8_base_G023_full_jumpstarter_seed118618280814698, P10_variant_context_richness_medium_G052_full_jumpstarter_seed93024497730136, P8_base_G052_full_jumpstarter_seed247721954600093, P5_base_G052_full_jumpstarter_seed18565052191216, P8_base_G017_full_jumpstarter_seed158398779615268"
     ]
   },
-  "output_dir": "experiments/benchmark/runs/react_full_test300_limit300",
+  "output_dir": "benchmark/runs/react_full_test300_limit300",
   "errors": [],
   "warnings": []
 }

@@ -1,9 +1,9 @@
 {
   "valid": true,
-  "run_dir": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
-  "sessions_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/sessions.jsonl",
-  "output_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_labels.jsonl",
-  "metrics_path": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_metrics.json",
+  "run_dir": "benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
+  "sessions_path": "benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/sessions.jsonl",
+  "output_path": "benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_labels.jsonl",
+  "metrics_path": "benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507/context_relevance_metrics.json",
   "model": "gpt-5.4-mini",
   "live": true,
   "max_workers": 4,

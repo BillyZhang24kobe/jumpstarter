@@ -1,6 +1,6 @@
 # Workflow Experiment Score Summary
 
-- Run directory: `experiments/benchmark/runs/single_turn_decomposition_test300`
+- Run directory: `benchmark/runs/single_turn_decomposition_test300`
 - Baseline: `single_turn_decomposition`
 - Scores: 300
 - Conditions: `single_turn_decomposition`

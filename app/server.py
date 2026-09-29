@@ -18,6 +18,9 @@ client = OpenAI(
     organization=os.environ.get("OPENAI_ORG_ID") or None
 )
 
+# Chat model for every route. The user study ran on gpt-4-turbo and gpt-4; set JUMPSTARTER_MODEL to use another model.
+MODEL = os.environ.get("JUMPSTARTER_MODEL", "gpt-4o")
+
 #for dalle
 import json
 from base64 import b64decode
@@ -38,7 +41,7 @@ def context_curation_fork(main_purpose, task_name, task_description, user_contex
     prompt = """My user has a main purpose: {main_purpose}. My user is working on the task {task_name}: {task_description}. My user needs to break down the task into sub-tasks. Here is the current context history from the user: {context_history}. Please select the most relevant context key from the current context history that can be used to better decompose the current task into several sub-tasks for the user to get started. Do not help the user to break down the task. Please also provide explanations. Format the response like this: <context_key> \n \n <reasons>. Replace the context_key with the actual key in the context history.""".format(main_purpose=main_purpose, task_name=task_name, task_description=task_description, context_history=user_context)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": ''},
             {"role": "user", "content": prompt},
@@ -64,7 +67,7 @@ def gpt_parser_for_fork(context_info):
     user_prompt = """Input: {raw_answer_draft} \n Output: """.format(raw_answer_draft=context_info)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": user_prompt},
@@ -84,7 +87,7 @@ def get_general_steps():
     print(query)
 
     output = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -106,7 +109,7 @@ def get_emotional_support():
     print(prompt)
 
     output = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -127,7 +130,7 @@ def get_detailed_steps():
     print(query)
 
     output = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -151,7 +154,7 @@ def request_context_info():
     print(prompt)
 
     output = client.chat.completions.create(
-        model="gpt-4",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -249,7 +252,7 @@ def get_started_all():
 
     # for i, action in enumerate(actions):
     #     output = client.chat.completions.create(
-    #         model="gpt-4",
+    #         model=MODEL,
     #         messages=[
     #             {"role": "system", "content": sys_prompt},
     #             {"role": "user", "content": prompts[i]},
@@ -261,7 +264,7 @@ def get_started_all():
     #     responses["response_" + action] = response
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -306,7 +309,7 @@ A: No"""
     prompt = "Q: {}".format(description)
 
     output = client.chat.completions.create(
-        model="gpt-4",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -352,7 +355,7 @@ def context_elicitation_draft():
     3. <question 3> : <reason for asking question 3> -> title of question 3 """.format(main_purpose=main_purpose, task_name=task_name, task_description=task_description, context_history=user_context)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": ''},
             {"role": "user", "content": prompt},
@@ -393,7 +396,7 @@ def context_curation_draft():
     prompt = """My user has a main purpose: {main_purpose}. My user is working on the task {task_name}: {task_description}. Here is the current context history in JSON format (with 'key':'value' pairs) from the user: {context_history}.""".format(main_purpose=main_purpose, task_name=task_name, task_description=task_description, context_history=user_context)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -461,7 +464,7 @@ def get_fork_steps():
         prompt = "D: {} \n E: {}".format(description, cl)
         try:
             output = client.chat.completions.create(
-                model="gpt-4-turbo",
+                model=MODEL,
                 messages=[
                     {"role": "system", "content": sys_prompt},
                     {"role": "user", "content": prompt},
@@ -491,7 +494,7 @@ def get_fork_steps():
     
     try:
         output = client.chat.completions.create(
-            model="gpt-4-turbo",
+            model=MODEL,
             messages=[
                 {"role": "system", "content": sys_prompt_fd},
                 {"role": "user", "content": prompt_fd},
@@ -618,7 +621,7 @@ def get_started():
     print(prompt)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -648,7 +651,7 @@ def synthesize():
     print(prompt)
 
     output = client.chat.completions.create(
-        model="gpt-4",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -673,7 +676,7 @@ def regenerate():
     print(prompt)
 
     output = client.chat.completions.create(
-        model="gpt-4",
+        model=MODEL,
         messages=[
             {"role": "system", "content": "You are a helpful assistant to answer query related to AI PhD applications."},
             {"role": "user", "content": prompt},
@@ -703,7 +706,7 @@ def chatresponse():
     print(sys_prompt)
 
     output = client.chat.completions.create(
-        model="gpt-4",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -821,7 +824,7 @@ def detect_subtasks():
     user_prompt = """My user is working on the task {}: {}. My user needs to know if the current task needs to be decomposed.""".format(node_text, description)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": user_prompt},
@@ -908,7 +911,7 @@ Now, start prediction:"""
     prompt = """Input: My user has a main purpose: {task_input}. The current context history from the user is empty.""".format(task_input=task_input)
 
     output = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model=MODEL,
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": prompt},
@@ -1083,4 +1086,4 @@ if __name__ == '__main__':
     # app.run(debug = True, port = 4000)    
     # app.run(debug = True, port = 5003)
     # Set JUMPSTARTER_HOST=0.0.0.0 to serve other machines (the debugger stays on, so only on a trusted network)
-    app.run(host=os.environ.get('JUMPSTARTER_HOST', '127.0.0.1'), port=55113, debug=True)
+    app.run(host=os.environ.get('JUMPSTARTER_HOST', '127.0.0.1'), port=55113, debug=True, use_reloader=False)

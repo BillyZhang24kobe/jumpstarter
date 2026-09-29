@@ -1,5 +1,5 @@
 {
-  "source_profiles_path": "experiments/benchmark/data/simulation_profiles.json",
+  "source_profiles_path": "benchmark/data/simulation_profiles.json",
   "validation_size": 10,
   "selection_policy": "diagonal_distinct_persona_goal_pairs",
   "validation_profile_ids": [

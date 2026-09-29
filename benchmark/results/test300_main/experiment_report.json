@@ -107,7 +107,7 @@
       "Some sessions had pushback events but still reached final approval; inspect traces for lenient acceptance: P2_base_G022_all_context_seed36588898923760, P2_base_G022_flat_decomposition_seed150677513388586, P8_base_G022_flat_decomposition_seed10835805466730, P5_base_G022_full_jumpstarter_seed140297118058914, P5_base_G022_random_selection_seed85422748243059, P10_variant_context_richness_medium_G054_full_jumpstarter_seed176077029140514, P8_base_G054_full_jumpstarter_seed34615603166876, P8_base_G054_all_context_seed106071967904920, P8_base_G054_random_selection_seed50370848117829, P6_variant_communication_style_balanced_G054_flat_decomposition_seed110095520897809"
     ]
   },
-  "output_dir": "experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
+  "output_dir": "benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507",
   "errors": [],
   "warnings": []
 }

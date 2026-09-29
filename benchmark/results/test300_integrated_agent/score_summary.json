@@ -1,6 +1,6 @@
 {
   "valid": true,
-  "run_dir": "experiments/benchmark/runs/react_full_test300_limit300",
+  "run_dir": "benchmark/runs/react_full_test300_limit300",
   "baseline_condition": "full_jumpstarter",
   "score_count": 600,
   "condition_count": 2,
@@ -375,8 +375,8 @@
       "losses": 72
     }
   ],
-  "output_json_path": "experiments/benchmark/runs/react_full_test300_limit300/score_summary.json",
-  "output_markdown_path": "experiments/benchmark/runs/react_full_test300_limit300/score_summary.md",
+  "output_json_path": "benchmark/runs/react_full_test300_limit300/score_summary.json",
+  "output_markdown_path": "benchmark/runs/react_full_test300_limit300/score_summary.md",
   "errors": [],
   "warnings": []
 }

@@ -1,4 +1,5 @@
-# Python 3.12. Versions are the ones the paper's experiments were run with.
+# Python 3.11-3.14 (the paper's experiments ran on 3.12). Versions are the ones the paper's experiments
+# were run with, except matplotlib (see below).
 
 # Benchmark: workflow simulator, simulated users, judge (OpenAI Responses API with structured outputs)
 openai==2.33.0
@@ -7,7 +8,9 @@ tqdm==4.67.3
 
 # Interactive app (app/)
 flask==3.0.0
+werkzeug==3.1.9
 
-# Quality vs. context-efficiency figure (benchmark/plot_quality_context_efficiency.py)
-matplotlib==3.8.0
+# Quality vs. context-efficiency figure (benchmark/plot_quality_context_efficiency.py).
+# The paper used matplotlib 3.8.0, which does not install on Python 3.13+; 3.10.8 gives the same figure statistics.
+matplotlib==3.10.8
 tiktoken==0.13.0

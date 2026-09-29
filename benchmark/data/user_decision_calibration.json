@@ -210,8 +210,8 @@
     "mean_snapshots_per_session": 1.1333,
     "record_snapshots": 17,
     "records_by_log": {
-      "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy.log": 5,
-      "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy2.log": 12
+      "userstudy.log": 5,
+      "userstudy2.log": 12
     },
     "unique_tasks": 15,
     "unique_users": 11

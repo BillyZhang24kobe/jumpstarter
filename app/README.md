@@ -13,7 +13,7 @@ python app/server.py
 
 Open http://127.0.0.1:55113 and log in with any username and password. A new username creates an account; accounts, task trees, and saved drafts are stored as JSON files in `app/database/`, in plain text, so don't reuse a real password. Uploaded context files go to `app/uploads/`. To serve other machines, set `JUMPSTARTER_HOST=0.0.0.0`. The Flask debugger stays on, so only do this on a trusted network.
 
-Each route calls the OpenAI model hard-coded in it (mostly `gpt-4-turbo`, some `gpt-4`). If OpenAI has retired a model, change its name in `server.py`.
+Every route calls `gpt-4o`. To use another OpenAI chat model, set `JUMPSTARTER_MODEL` to its name before starting the server. The version used in the user study called `gpt-4-turbo` and `gpt-4`.
 
 ## Routes and the paper's mechanisms
 

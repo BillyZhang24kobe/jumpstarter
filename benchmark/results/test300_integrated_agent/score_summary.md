@@ -1,6 +1,6 @@
 # Workflow Experiment Score Summary
 
-- Run directory: `experiments/benchmark/runs/react_full_test300_limit300`
+- Run directory: `benchmark/runs/react_full_test300_limit300`
 - Baseline: `full_jumpstarter`
 - Scores: 600
 - Conditions: `full_jumpstarter`, `react_integrated_planner`

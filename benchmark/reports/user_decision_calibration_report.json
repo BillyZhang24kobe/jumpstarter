@@ -1,11 +1,11 @@
 {
   "valid": true,
   "source_logs": [
-    "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy.log",
-    "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy2.log"
+    "userstudy.log",
+    "userstudy2.log"
   ],
-  "output_path": "/home/billyzhang/JourneyLLM/journeyLLM_deploy/experiments/benchmark/data/user_decision_calibration.json",
-  "report_path": "/home/billyzhang/JourneyLLM/journeyLLM_deploy/experiments/benchmark/reports/user_decision_calibration_report.json",
+  "output_path": "benchmark/data/user_decision_calibration.json",
+  "report_path": "benchmark/reports/user_decision_calibration_report.json",
   "total_log_records": 17,
   "final_session_count": 15,
   "policies": {
@@ -15,8 +15,8 @@
       "unique_users": 11,
       "unique_tasks": 15,
       "records_by_log": {
-        "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy.log": 5,
-        "/home/billyzhang/JourneyLLM/journeyLLM_deploy/userstudy2.log": 12
+        "userstudy.log": 5,
+        "userstudy2.log": 12
       },
       "mean_snapshots_per_session": 1.1333
     },

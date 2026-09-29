@@ -51,7 +51,7 @@
     "errors": [],
     "warnings": []
   },
-  "output_dir": "experiments/benchmark/runs/single_turn_decomposition_test300",
+  "output_dir": "benchmark/runs/single_turn_decomposition_test300",
   "errors": [],
   "warnings": []
 }

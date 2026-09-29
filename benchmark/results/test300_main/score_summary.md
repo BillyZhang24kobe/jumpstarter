@@ -1,6 +1,6 @@
 # Workflow Experiment Score Summary
 
-- Run directory: `experiments/benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507`
+- Run directory: `benchmark/runs/workflow_experiment_test-300_all_live_all_limit300_20260507_183507`
 - Baseline: `full_jumpstarter`
 - Scores: 4200
 - Conditions: `adapt_recursive_decomposition`, `all_context`, `ask_before_plan`, `chatgpt_vanilla`, `chatgpt_with_elicited_context`, `chatgpt_with_structured_summary`, `flat_decomposition`, `full_jumpstarter`, `long_context_planner`, `no_elicitation`, `no_reuse`, `no_selection`, `random_selection`, `unstructured_memory_rag`

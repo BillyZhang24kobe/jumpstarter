@@ -3,7 +3,8 @@ __pycache__/
 .DS_Store
 .release_export
 
-# Secrets and local app state
+# Local environment, secrets, and app state
+.venv/
 .env
 api_secrets.py
 app/uploads/*

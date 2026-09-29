@@ -177,7 +177,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--no-error-bars",
         action="store_true",
-        help="Hide 95% CI error bars and show only the condition points.",
+        help="Hide 95%% CI error bars and show only the condition points.",
     )
     parser.add_argument(
         "--no-annotations",

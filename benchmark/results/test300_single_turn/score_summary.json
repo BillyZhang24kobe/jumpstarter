@@ -1,6 +1,6 @@
 {
   "valid": true,
-  "run_dir": "experiments/benchmark/runs/single_turn_decomposition_test300",
+  "run_dir": "benchmark/runs/single_turn_decomposition_test300",
   "baseline_condition": "single_turn_decomposition",
   "score_count": 300,
   "condition_count": 1,
@@ -185,8 +185,8 @@
     }
   ],
   "comparisons": [],
-  "output_json_path": "experiments/benchmark/runs/single_turn_decomposition_test300/score_summary.json",
-  "output_markdown_path": "experiments/benchmark/runs/single_turn_decomposition_test300/score_summary.md",
+  "output_json_path": "benchmark/runs/single_turn_decomposition_test300/score_summary.json",
+  "output_markdown_path": "benchmark/runs/single_turn_decomposition_test300/score_summary.md",
   "errors": [],
   "warnings": []
 }
